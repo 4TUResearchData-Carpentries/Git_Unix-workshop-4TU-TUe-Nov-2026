@@ -1,17 +1,18 @@
 project:
   type: default
+  output-dir: _site
   render:
-    - index.qmd
-    - intro.qmd
-    - unix.qmd
-    - git-intro.qmd
-    - git-remotes.qmd
+    - "*.qmd"
 
+# Shared options for every deck in this repository.
+# Per-deck files only need a `title` and `subtitle`.
 format:
   revealjs:
     theme: [default, styles.scss]
+    logo: images/shared/logo.png
     slide-number: true
-    chalkboard: false
-    hash: true
-    transition: fade
-    # logo: img/logo.png   # uncomment and add your logo; positioned by .slide-logo in styles.scss
+    transition: slide
+    center: true
+    width: 1280
+    height: 720
+    preview-links: auto
