@@ -1,0 +1,16 @@
+---
+title: "Unix & Git workshop"
+subtitle: "Slides, in order of the workshop"
+format:
+  html:
+    toc: false
+---
+
+The workshop slides, in the order they are presented:
+
+1. [Intro](intro.html): welcome, schedule, team and code of conduct
+2. [Unix](unix.html): Unix shell introduction
+3. [Git intro](git-intro.html): version control with Git
+4. [Git remotes](git-remotes.html): Git remotes and GitHub
+
+Click a slide deck to open it. Inside a deck, press `F` for fullscreen, `S` for speaker view and `O` for the slide overview.

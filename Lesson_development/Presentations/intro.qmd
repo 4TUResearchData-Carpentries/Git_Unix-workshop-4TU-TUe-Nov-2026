@@ -1,0 +1,114 @@
+---
+title: "Welcome to the Unix & Git workshop"
+footer: "FIND OUT MORE AT DATA.4TU.NL"
+---
+
+## Schedule
+
+::: {.row}
+::: {.bubble}
+**Day 1**
+
+Unix + Local version control (Git)
+:::
+
+::: {.bubble}
+**Day 2**
+
+Collaborative Git + What is 4TU.ResearchData
+:::
+:::
+
+## Program of today (Day 1)
+
+::: {.cream-box}
+**09:30 – 12:00** Introduction to the Unix shell
+
+- 10:45 – 11:00 Break
+
+**12:00 – 13:00** Lunch
+
+**13:00 – 16:30** Version control with Git
+
+- 14:15 – 14:30 Break
+
+**16:30** End of the workshop, Day 1
+:::
+
+## The team of the workshop
+
+::: {.row}
+::: {.labelled}
+::: {.pill .pill-lg .p-orange}
+Trainer
+:::
+
+**Leila Iñigo**\
+Trainer of Digital Skills at 4TU.ResearchData
+:::
+
+::: {.labelled}
+::: {.pill .pill-lg .p-tan}
+Instructors
+:::
+
+**John Bons**\
+Research IT Consultant, Department of Built Environment
+:::
+:::
+
+## The team of the workshop
+
+::: {.labelled}
+::: {.pill .pill-lg .p-salmon}
+Helpers
+:::
+:::
+
+::: {.row}
+::: {.note-box}
+**Özgün Balaban**\
+Postdoc, Built Environment, Information Systems in the Built Environment
+:::
+
+::: {.note-box}
+**Dylan Feldner-Busztin**\
+Data Manager in the Research Center for Materials-Driven Regeneration
+:::
+
+::: {.note-box}
+**Linda Chen – Zijlstra**\
+Research IT consultant, Department of Biomedical Engineering
+:::
+:::
+
+## The team of the workshop
+
+::: {.bubble}
+You!
+:::
+
+## Code of Conduct
+
+::: {.checks}
+- Use welcoming and inclusive language
+- Be respectful of different viewpoints and experiences
+- Gracefully accept constructive criticism
+- Show courtesy and respect towards others during the workshop
+:::
+
+::: {.small}
+The Carpentries teaches foundational coding and data science skills to researchers worldwide.
+:::
+
+## Ice breaker
+
+Go to <https://edu.nl/vdm9f>
+
+::: {.box}
+On the goat-scale, how are you feeling today?
+:::
+
+## Let's start!!! {.center}
+
+## Energyser {.center}

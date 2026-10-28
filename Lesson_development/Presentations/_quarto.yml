@@ -1,0 +1,17 @@
+project:
+  type: default
+  render:
+    - index.qmd
+    - intro.qmd
+    - unix.qmd
+    - git-intro.qmd
+    - git-remotes.qmd
+
+format:
+  revealjs:
+    theme: [default, styles.scss]
+    slide-number: true
+    chalkboard: false
+    hash: true
+    transition: fade
+    # logo: img/logo.png   # uncomment and add your logo; positioned by .slide-logo in styles.scss

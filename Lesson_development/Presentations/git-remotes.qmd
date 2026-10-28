@@ -1,0 +1,96 @@
+---
+title: "Git Remotes: GitHub"
+---
+
+## Git remotes
+
+Remote repositories are versions of your project that are hosted on the Internet or network somewhere.
+
+Collaborating with others involves managing these remote repositories and pushing and pulling data to and from them when you need to share work.
+
+::: {.row}
+::: {.pill .pill-lg .p-orange}
+GitHub
+:::
+
+::: {.pill .pill-lg .p-tan}
+GitLab
+:::
+
+::: {.pill .pill-lg .p-salmon}
+Bitbucket
+:::
+:::
+
+## GitHub
+
+- AI-powered developer platform that allows developers to create, store, manage and share their code.
+- It provides the distributed version control of Git plus access control, bug tracking, software feature requests, task management, continuous integration, and wikis for every project.
+- It is the world's largest source code host.
+
+## Remote and local repositories
+
+```{mermaid}
+%%| fig-align: center
+flowchart LR
+  L1["Local computer"] -- "push" --> R(["Remote"])
+  R -- "fetch / pull" --> L1
+  L2["Local computer"] -- "push" --> R
+  R -- "fetch / pull" --> L2
+  L3["Local computer"] -- "push" --> R
+  R -- "fetch / pull" --> L3
+```
+
+## Schedule
+
+| Time          | Activity                                                                                                                                              |
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 13:30 – 15:30 | Types of collaborations and good practices for collaboration                                                                                          |
+| 15:30 – 16:30 | Get to know 4TU.ResearchData, the only Dutch trusted repository for research data and software in Natural and Engineering sciences and design.       |
+
+## {.center}
+
+<!-- Slide 6 of the original has no text (image only). -->
+
+## SSH connection
+
+Secure Shell (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network by providing a secure channel to connect an SSH client with an SSH server.
+
+## Dealing with conflicts when collaborating in a project
+
+::: {.row}
+::: {.labelled}
+::: {.pill .pill-lg .p-orange}
+Alice
+:::
+
+```bash
+git add .
+git commit -m "message"
+git pull
+git push
+```
+:::
+
+::: {.labelled}
+::: {.pill .pill-lg .p-grey}
+Remote
+:::
+:::
+
+::: {.labelled}
+::: {.pill .pill-lg .p-tan}
+John
+:::
+
+```bash
+git add .
+git commit -m "message"
+git push
+```
+:::
+:::
+
+## {.center}
+
+<!-- Slides 9 and 10 of the original have no text (image only). -->

@@ -1,0 +1,187 @@
+---
+title: "Version control with Git"
+---
+
+## Overview
+
+- Why Git
+- What is Git
+- How to use Git
+
+## Why Git? {.center}
+
+(or any other version control software)
+
+## Situation #1: Review of a draft document (offline mode)
+
+::: {.incremental}
+- Difficult to know which copy of the document contains which change.
+- Duplication of the same information many times, occupying space on your hard drive.
+:::
+
+## Situation #2: A group coding project
+
+::: {.row}
+::: {.labelled}
+::: {.pill .pill-lg .p-orange}
+Alice
+:::
+
+Project copy #1
+:::
+
+::: {.labelled}
+::: {.pill .pill-lg .p-tan}
+Laura
+:::
+
+Project copy #2
+:::
+
+::: {.labelled}
+::: {.pill .pill-lg .p-salmon}
+John
+:::
+
+Project copy #3
+:::
+:::
+
+. . .
+
+::: {.focus}
+**Challenge:** How to merge all these different copies together and maintain a final copy of the project?
+:::
+
+. . .
+
+::: {.box}
+John makes his changes and sends his project to Laura
+:::
+
+. . .
+
+::: {.box}
+Laura merges her changes and sends it to Alice
+:::
+
+. . .
+
+::: {.box}
+Alice merges her changes, reviews and maintains the final copy
+:::
+
+## Situation #2: Consequences of this solution
+
+::: {.incremental}
+- Manual approach
+- Time consuming
+- Error prone
+- Not scalable
+- Inefficient
+:::
+
+. . .
+
+::: {.focus}
+Thus, we need an efficient system that tracks different versions of a project and allows the team to know **who** has made changes to the project, **when** and **why**!
+:::
+
+## What is Git?
+
+Mentimeter: <https://www.menti.com/alx2mugaqr1n>
+
+## What is Git? {.center}
+
+Menti Poll
+
+## What is Git?
+
+- Git is the most used version control system. More than 90% of software projects around the world use Git.
+- It was created in 2005 by Linus Torvalds, the same creator of the Linux OS.
+- It is free, open source, fast and scalable.
+- It is a version control software meant to keep track of the entire history of a project and allows collaboration of any size.
+- Git + GitHub (GitLab) allows distributed / de-centralized collaboration within the team of collaborators.
+
+## How to use Git? {.center}
+
+The workshop of today!
+
+## Tools
+
+::: {.checks}
+- Unix terminal (Git Bash for Windows or WSL)
+- Git
+- Browser
+- GitHub account
+:::
+
+## Schedule
+
+| Time          | Activity                                           |
+|---------------|----------------------------------------------------|
+| 09:30 – 09:45 | Git Intro                                          |
+| 09:45 – 11:30 | Setting up a local Git repository                  |
+| 14:30 – 14:45 | Break                                              |
+| 14:45 – 15:45 | Git cycle and Ignoring things                      |
+| 15:30 – 15:45 | Exercise                                           |
+| 15:45 – 16:00 | Break                                              |
+| 16:00 – 17:00 | Exploring the history. Concluding remarks          |
+
+## Learning outcomes
+
+By the end of this lesson, we expect to:
+
+::: {.checks}
+- Create a local git repository
+- Manage the history of changes of certain file
+- Understand Git terminology
+- Set up a remote project
+- Know how to collaborate with other peers
+:::
+
+## {.center}
+
+<!-- Slide 19 of the original has no text (image only). Add the figure here, e.g.: ![](img/slide19.png) -->
+
+## The working directory, stage area and git history relationship
+
+<!-- Original slide: diagram. Add it here, e.g.: ![](img/working-dir-stage-history.png) -->
+
+## {.center}
+
+<!-- Source of the figure on the original slide: Gandhi, R. (2022). Head First Git. O'Reilly Media, Inc. -->
+
+::: {.small}
+Gandhi, R. (2022). *Head First Git*. O'Reilly Media, Inc.
+:::
+
+## {.center}
+
+<!-- Source of the figure on the original slide: Gandhi, R. (2022). Head First Git. O'Reilly Media, Inc. -->
+
+::: {.small}
+Gandhi, R. (2022). *Head First Git*. O'Reilly Media, Inc.
+:::
+
+## The working directory, stage area: status
+
+<!-- Original slide: diagram. Add it here, e.g.: ![](img/status.png) -->
+
+## {.center}
+
+<!-- Slide 24 of the original has no text (image only). -->
+
+## `git restore`
+
+::: {.box}
+`git restore` > the opposite of the `git add`
+:::
+
+## `git restore --staged`
+
+<!-- NOTE: the original slide says "the opposite of the git commit"; `git restore --staged` actually unstages (it is the opposite of `git add`). Kept as in the source, please review. -->
+
+::: {.box}
+`git restore --staged` the opposite of the `git commit`
+:::

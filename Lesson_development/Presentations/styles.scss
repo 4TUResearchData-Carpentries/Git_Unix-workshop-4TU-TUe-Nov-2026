@@ -1,0 +1,163 @@
+/*-- scss:defaults --*/
+$body-bg: #b9dcee;
+$body-color: #333333;
+$link-color: #1f4e79;
+$presentation-heading-color: #3a3a3a;
+$presentation-heading-font-weight: 700;
+$presentation-font-size-root: 30px;
+
+/*-- scss:rules --*/
+
+// palette used by the boxes and pills
+$c-orange: #f39200;
+$c-grey:   #9a9a9a;
+$c-red:    #ff5a26;
+$c-tan:    #e8c98a;
+$c-cream:  #fcf3e4;
+$c-salmon: #f4a582;
+$c-edge:   #6b4a2f;
+
+.reveal .slide-logo { top: 12px; left: 12px; right: auto; bottom: auto; max-height: 60px !important; }
+.reveal h1, .reveal h2 { text-align: center; }
+.reveal .subtitle { font-weight: 400; }
+.reveal .title-slide h1.title { font-size: 2em; }
+.reveal .small { font-size: .7em; }
+.reveal .center-text { text-align: center; }
+
+/* ---- boxes ---- */
+.reveal .box {
+  background: linear-gradient(#fde3d3, #f5b88f);
+  border: 2px solid $c-edge; border-radius: 10px;
+  padding: .4em .8em; text-align: center; font-size: .8em;
+}
+.reveal .note-box {
+  background: #e8e8e8; border: 2px solid #555; border-radius: 10px;
+  padding: .4em .8em; text-align: center; font-size: .6em;
+}
+.reveal .grey-box {
+  background: #8c8c8c; color: #fff; border-radius: 10px;
+  padding: .5em .9em; text-align: center; font-size: .7em;
+}
+.reveal .dark-box {
+  background: #3a3a3a; color: #fff; border-radius: 6px;
+  padding: .4em .8em; text-align: center; font-size: .6em;
+}
+.reveal .cream-box {
+  background: $c-cream; border: 2px solid $c-edge; border-radius: 6px;
+  padding: .5em 1em; font-size: .7em;
+}
+.reveal .bubble {
+  background: $c-orange; border: 2px solid $c-edge; border-radius: 2em;
+  padding: 1em 1.2em; text-align: center; font-size: .8em;
+}
+
+/* ---- pills (small coloured labels) ---- */
+.reveal .pill {
+  display: inline-block; background: $c-orange; border: 2px solid $c-edge;
+  border-radius: 10px; padding: .3em .6em; margin: .2em; font-size: .6em; text-align: center;
+}
+.reveal .pill-lg { font-size: .75em; padding: .45em .9em; }
+.reveal .p-orange { background: $c-orange; }
+.reveal .p-grey   { background: $c-grey; }
+.reveal .p-red    { background: $c-red; }
+.reveal .p-tan    { background: $c-tan; }
+.reveal .p-cream  { background: $c-cream; }
+.reveal .p-salmon { background: $c-salmon; }
+
+/* ---- layout helpers ---- */
+.reveal .row { display: flex; align-items: center; justify-content: center; gap: .8em; }
+.reveal .row > div { flex: 1; }
+.reveal .row > .arrow { flex: 0 0 auto; font-size: 1.8em; }
+.reveal .labelled { text-align: center; font-size: .6em; }
+.reveal .labelled .pill { font-size: 1.1em; display: block; margin: 0 auto .4em; }
+
+.reveal .checks ul { list-style: none; padding-left: 0; }
+.reveal .checks li::before { content: "\2713\00a0\00a0"; }
+
+.reveal .badge {
+  display: inline-block; width: 1.7em; height: 1.7em; line-height: 1.55em;
+  border-radius: 50%; background: #fde3d3; border: 2px solid #e8a33d;
+  text-align: center; font-size: .6em; margin-right: .5em; vertical-align: middle;
+}
+
+/* ---- "layers of interoperability" cards ---- */
+.reveal .layers { display: flex; gap: .6em; justify-content: center; }
+.reveal .layer {
+  flex: 1; border-radius: 10px; padding: .5em .7em; text-align: center; font-size: .65em;
+  border: 2px solid $c-edge;
+}
+.reveal .layer b { display: block; font-size: 1.15em; }
+.reveal .layer em { display: block; margin-bottom: .4em; }
+.reveal .l-struct { background: $c-grey; }
+.reveal .l-tech   { background: $c-orange; }
+.reveal .l-sem    { background: $c-salmon; }
+
+/* ---- hub diagram ("interoperable dataset can connect to an ecosystem") ---- */
+.reveal .eco {
+  display: grid; align-items: center; justify-items: center; row-gap: .15em;
+  grid-template-columns: 1fr .6fr 1.1fr .6fr 1fr;
+  grid-template-areas:
+    ". . top . ."
+    ". . atop . ."
+    "left aleft center aright right"
+    ". . abot . ."
+    ". . bottom . .";
+}
+.reveal .eco .pill { margin: 0; font-size: .6em; }
+.reveal .eco .a { font-size: .5em; text-align: center; }
+.reveal .eco .top { grid-area: top; } .reveal .eco .atop { grid-area: atop; }
+.reveal .eco .left { grid-area: left; } .reveal .eco .aleft { grid-area: aleft; }
+.reveal .eco .center { grid-area: center; font-size: .7em; }
+.reveal .eco .aright { grid-area: aright; } .reveal .eco .right { grid-area: right; }
+.reveal .eco .abot { grid-area: abot; } .reveal .eco .bottom { grid-area: bottom; }
+
+.reveal table { font-size: .6em; margin: 0 auto; background: #fff; }
+.reveal pre code { font-size: .7em; }
+
+/* keep tall character images from pushing content off the slide */
+.reveal .api-relevance { align-items: center; }
+.reveal .api-relevance img { max-height: 280px; width: auto; }
+
+/*-- scss:defaults --*/
+.callout.callout-style-simple {
+  background-color: #f5f5f5;
+}
+
+.workflow {
+  width: 55%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reveal .slides section {
+  text-align: center;
+}
+
+.reveal .slides section .workflow {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.focus {
+  border: 3px solid #f28c28;
+  padding: 1em;
+  margin-top: 0.5em;
+  background: rgba(242, 140, 40, 0.06);
+}
+
+/*-- scss:rules --*/
+.reveal .slides table {
+  width: 100% !important;
+  background: transparent !important;
+  color: inherit !important;
+  --bs-table-bg: transparent;
+  --bs-table-striped-bg: transparent;
+}
+
+.reveal .slides table th,
+.reveal .slides table td,
+.reveal .slides table tr {
+  background: transparent !important;
+  font-size: 2rem !important;   
+  padding: 0.5em 0.9em;
+}
