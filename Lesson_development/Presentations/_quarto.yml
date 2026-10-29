@@ -1,18 +1,24 @@
 project:
   type: default
   output-dir: _site
+  # copied as-is into the built site (the brand fonts used by fonts.css)
+  resources:
+    - fonts/
+  # Every .qmd file in this folder is rendered, so a new deck needs no registration here.
+  # README.md is not a .qmd file, so it is left out. To skip a draft, add a line such as
+  #   - "!draft-*.qmd"
   render:
     - "*.qmd"
 
-# Shared options for every deck in this repository.
-# Per-deck files only need a `title` and `subtitle`.
 format:
   revealjs:
     theme: [default, styles.scss]
-    logo: images/shared/logo.png
+    css: fonts.css          # @font-face rules for Aspekta and Space Grotesk
     slide-number: true
-    transition: slide
-    center: true
-    width: 1280
-    height: 720
-    preview-links: auto
+    chalkboard: false
+    hash: true
+    transition: fade
+    highlight-style: a11y   # accessible code colours, readable on the Off White code background
+    footer: "TRAINING NAME / ORGANISATION"
+    # logo: img/logo.png   # uncomment and add your logo; positioned by .slide-logo in styles.scss
+

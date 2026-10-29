@@ -527,8 +527,8 @@ Create a copy of the template and edit it:
 
 ```bash
 cd workshop-checkin
-cp check-in/template.md check-in/<first-two-letters-name-last-two-digits-phone>.md
-nano check-in/le71.md
+cp template.md <first-two-letters-name-last-two-digits-phone>.md
+nano le71.md
 ```
 
 > Example name: `le71.md`. Add your name, research field and your ideal job an ideal world.
@@ -572,6 +572,17 @@ git push origin <your-branch-name>
 
 > Instructor Note: Display this on a shared screen or slide.
 
+**demo before assignment**
+
+1. Owner writes an issue about something is not working in the code.
+2. Collaborator forks , clone , make a new branch, solve the issue and push it to the fork and create a PR.
+3. Owner sees the peer and tries it locally before it can be merged.
+   `git fetch origin pull/123/head:pr-123` 123 is the name of the PR
+   `git checkout pr-123`
+4. Owner goes to the website and merge the PR to main.
+
+- explain visually what happens.
+
 **Assignment:**
 
 1. Write an Issue in your `patients-analysis` repo. Options:
@@ -582,7 +593,7 @@ git push origin <your-branch-name>
 
 2. Pair up:
 
-   * Clone or fork each other’s repositories.
+   * Clone or fork each other’s repositories. 
    * Create a branch, solve the issue.
    * Open a Pull Request with your changes.
 

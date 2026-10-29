@@ -1,74 +1,186 @@
 /*-- scss:defaults --*/
-$body-bg: #b9dcee;
-$body-color: #333333;
-$link-color: #1f4e79;
-$presentation-heading-color: #3a3a3a;
-$presentation-heading-font-weight: 700;
+
+// ---------------------------------------------------------------------------
+// 4TU.ResearchData colour scheme (brand guidelines)
+//   Warm Orange   #F29100   Fresh Blue  #B9DBEF   Vibrant Orange #FF6829
+//   Soft Grey     #969696   Dark Grey   #3C3C3C   Off White      #FBF5E9
+//
+// Boxes, pills and cards use the palette colours as flat fills (no gradients, no
+// tints). Contrast rules (WCAG, text is always Dark Grey #3C3C3C unless noted):
+//   - Fresh Blue (slide background), Off White, Warm Orange: 7.6:1, 10:1, 4.6:1.
+//   - Soft Grey and Vibrant Orange fills (3.7:1 and 3.8:1) only hold text of 24px
+//     or more ("large text"); the pill, grey-box and layer sizes below respect this.
+//   - Soft Grey (#969696) is NEVER used as a text colour (2:1 on Fresh Blue).
+//   - Off White text is only used on Dark Grey (10:1).
+// ---------------------------------------------------------------------------
+$c-orange:   #F29100;   // Warm Orange
+$c-blue:     #B9DBEF;   // Fresh Blue
+$c-vibrant:  #FF6829;   // Vibrant Orange
+$c-grey:     #969696;   // Soft Grey (decoration only, never text)
+$c-dark:     #3C3C3C;   // Dark Grey (all text and borders)
+$c-offwhite: #FBF5E9;   // Off White
+
+// ---------------------------------------------------------------------------
+// Typography (brand guidelines). The @font-face rules are in fonts.css.
+//   Aspekta        titles, introductions and body text; 300 = regular, 500 = bold
+//   Space Grotesk  subtitles, labels, buttons; regular, in capitals
+// ---------------------------------------------------------------------------
+$font-aspekta: "Aspekta", "Helvetica Neue", Arial, sans-serif;
+$font-grotesk: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+$font-weight-body:  300;   // Aspekta 300 (brand "regular"); set to 400 for a sturdier look on poor projectors
+$font-weight-bold:  500;   // Aspekta 500 (brand "bold")
+$font-weight-title: 300;   // titles are set in the light weight in the brand guidelines
+$line-height-body:  1.4;   // brand: 140% for body text
+$line-height-title: 1.05;  // brand: 100% for titles
+
+// type sizes
+$code-font-size: .85em;   // code blocks (increase here to make all code bigger)
+
+// reveal.js / Quarto theme variables
+$body-bg: $c-blue;
+$body-color: $c-dark;
+$link-color: #1f4e79;           // darkened Fresh Blue, 6:1 on Fresh Blue
+$link-color-hover: #163a5a;
+$presentation-heading-color: $c-dark;
+$presentation-heading-font-weight: $font-weight-title;
+$presentation-heading-font: $font-aspekta;
+$font-family-sans-serif: $font-aspekta;
+$font-weight-base: $font-weight-body;
+$headings-font-weight: $font-weight-title;
 $presentation-font-size-root: 30px;
+
+// code colours (inline code and code blocks)
+$code-color: $c-dark;
+$code-bg: $c-offwhite;
+$code-block-bg: $c-offwhite;
+$code-block-border-color: $c-dark;
+$code-block-font-size: $code-font-size;
 
 /*-- scss:rules --*/
 
-// palette used by the boxes and pills
-$c-orange: #f39200;
-$c-grey:   #9a9a9a;
-$c-red:    #ff5a26;
-$c-tan:    #e8c98a;
-$c-cream:  #fcf3e4;
-$c-salmon: #f4a582;
-$c-edge:   #6b4a2f;
+/* ---- global text and typography ---- */
+.reveal, .reveal .slides, .reveal p, .reveal li { color: $c-dark; }
+.reveal, .reveal .slides, .reveal p, .reveal li, .reveal td, .reveal th {
+  font-family: $font-aspekta;
+  font-weight: $font-weight-body;
+}
+.reveal p, .reveal li, .reveal td { line-height: $line-height-body; }
+.reveal strong, .reveal b { font-weight: $font-weight-bold; }
+// titles: Aspekta, light, tight line height
+.reveal h1, .reveal h2 {
+  font-family: $font-aspekta;
+  font-weight: $font-weight-title;
+  line-height: $line-height-title;
+}
+// subtitles and labels: Space Grotesk regular, in capitals
+.reveal h3, .reveal h4, .reveal .subtitle {
+  font-family: $font-grotesk;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  line-height: $line-height-title;
+}
+.reveal a { text-decoration: underline; }      // links must not rely on colour alone
+.reveal .footer, .reveal .slide-number {
+  color: $c-dark; background: transparent;
+  font-family: $font-grotesk; font-weight: 400; text-transform: uppercase; letter-spacing: .04em;
+}
+.reveal .footer { font-size: .65em; }
 
 .reveal .slide-logo { top: 12px; left: 12px; right: auto; bottom: auto; max-height: 60px !important; }
 .reveal h1, .reveal h2 { text-align: center; }
-.reveal .subtitle { font-weight: 400; }
+.reveal .subtitle { color: $c-dark; }
 .reveal .title-slide h1.title { font-size: 2em; }
-.reveal .small { font-size: .7em; }
+.reveal .small { font-size: .75em; }
 .reveal .center-text { text-align: center; }
 
-/* ---- boxes ---- */
-.reveal .box {
-  background: linear-gradient(#fde3d3, #f5b88f);
-  border: 2px solid $c-edge; border-radius: 10px;
-  padding: .4em .8em; text-align: center; font-size: .8em;
+.reveal .slides section { text-align: center; }
+
+/* ---- code: bigger and high contrast ---- */
+// code blocks: Dark Grey text on Off White with a Dark Grey frame
+.reveal .slides pre,
+.reveal .slides div.sourceCode {
+  background: $c-offwhite;
+  border: 2px solid $c-dark;
+  border-radius: 8px;
+  box-shadow: none;
+  width: 100%;
+  margin: .5em auto;
+  font-size: $code-font-size;
+  text-align: left;
 }
-.reveal .note-box {
-  background: #e8e8e8; border: 2px solid #555; border-radius: 10px;
-  padding: .4em .8em; text-align: center; font-size: .6em;
+.reveal .slides pre code {
+  font-size: 1em;           // size is set once, on the <pre> above
+  line-height: 1.4;
+  padding: .6em .8em;
+  max-height: 560px;
+  color: $c-dark;
+  background: transparent;
+  text-align: left;
 }
-.reveal .grey-box {
-  background: #8c8c8c; color: #fff; border-radius: 10px;
-  padding: .5em .9em; text-align: center; font-size: .7em;
+// inline code: a small Off White chip
+.reveal .slides :not(pre) > code {
+  font-size: .9em;
+  color: $c-dark;
+  background: $c-offwhite;
+  border: 1px solid rgba(60, 60, 60, .35);
+  border-radius: 4px;
+  padding: .05em .3em;
 }
-.reveal .dark-box {
-  background: #3a3a3a; color: #fff; border-radius: 6px;
-  padding: .4em .8em; text-align: center; font-size: .6em;
+
+/* ---- boxes: flat fills in the brand colours ---- */
+.reveal .box {                       // key message: Warm Orange
+  background: $c-orange; color: $c-dark;
+  border-radius: 10px;
+  padding: .4em .8em; text-align: center; font-size: .85em;
 }
-.reveal .cream-box {
-  background: $c-cream; border: 2px solid $c-edge; border-radius: 6px;
-  padding: .5em 1em; font-size: .7em;
+.reveal .note-box {                  // side notes: Off White
+  background: $c-offwhite; color: $c-dark;
+  border-radius: 10px;
+  padding: .4em .8em; text-align: center; font-size: .75em;
+}
+.reveal .grey-box {                  // neutral: Soft Grey (24px = large text)
+  background: $c-grey; color: $c-dark;
+  border-radius: 10px;
+  padding: .5em .9em; text-align: center; font-size: .8em;
+}
+.reveal .dark-box {                  // emphasis: Dark Grey with Off White text
+  background: $c-dark; color: $c-offwhite;
+  border-radius: 6px;
+  padding: .4em .8em; text-align: center; font-size: .75em;
+}
+.reveal .cream-box {                 // longer text blocks: Off White
+  background: $c-offwhite; color: $c-dark;
+  border-radius: 6px;
+  padding: .5em 1em; font-size: .8em;
 }
 .reveal .bubble {
-  background: $c-orange; border: 2px solid $c-edge; border-radius: 2em;
-  padding: 1em 1.2em; text-align: center; font-size: .8em;
+  background: $c-orange; color: $c-dark;
+  border-radius: 2em;
+  padding: 1em 1.2em; text-align: center; font-size: .85em;
 }
 
 /* ---- pills (small coloured labels) ---- */
 .reveal .pill {
-  display: inline-block; background: $c-orange; border: 2px solid $c-edge;
-  border-radius: 10px; padding: .3em .6em; margin: .2em; font-size: .6em; text-align: center;
+  display: inline-block; background: $c-orange; color: $c-dark;
+  border-radius: 10px;
+  padding: .3em .6em; margin: .2em; font-size: .8em; text-align: center;
+  font-family: $font-grotesk; font-weight: 400; text-transform: uppercase; letter-spacing: .04em;
 }
-.reveal .pill-lg { font-size: .75em; padding: .45em .9em; }
-.reveal .p-orange { background: $c-orange; }
-.reveal .p-grey   { background: $c-grey; }
-.reveal .p-red    { background: $c-red; }
-.reveal .p-tan    { background: $c-tan; }
-.reveal .p-cream  { background: $c-cream; }
-.reveal .p-salmon { background: $c-salmon; }
+.reveal .pill-lg { font-size: .85em; padding: .45em .9em; }
+.reveal .p-orange { background: $c-orange; }                       // Warm Orange
+.reveal .p-grey   { background: $c-grey; }                         // Soft Grey
+.reveal .p-red    { background: $c-vibrant; }                      // Vibrant Orange
+.reveal .p-salmon { background: $c-vibrant; }                      // (same as p-red, older name)
+.reveal .p-tan    { background: $c-offwhite; }                     // Off White (older name)
+.reveal .p-cream  { background: $c-offwhite; }                     // Off White
+.reveal .p-dark   { background: $c-dark; color: $c-offwhite; }     // Dark Grey
 
 /* ---- layout helpers ---- */
 .reveal .row { display: flex; align-items: center; justify-content: center; gap: .8em; }
 .reveal .row > div { flex: 1; }
 .reveal .row > .arrow { flex: 0 0 auto; font-size: 1.8em; }
-.reveal .labelled { text-align: center; font-size: .6em; }
+.reveal .labelled { text-align: center; font-size: .75em; }
 .reveal .labelled .pill { font-size: 1.1em; display: block; margin: 0 auto .4em; }
 
 .reveal .checks ul { list-style: none; padding-left: 0; }
@@ -76,21 +188,21 @@ $c-edge:   #6b4a2f;
 
 .reveal .badge {
   display: inline-block; width: 1.7em; height: 1.7em; line-height: 1.55em;
-  border-radius: 50%; background: #fde3d3; border: 2px solid #e8a33d;
-  text-align: center; font-size: .6em; margin-right: .5em; vertical-align: middle;
+  border-radius: 50%; background: $c-orange; color: $c-dark;
+  text-align: center; font-size: .75em; font-weight: $font-weight-bold; margin-right: .5em; vertical-align: middle;
 }
 
 /* ---- "layers of interoperability" cards ---- */
 .reveal .layers { display: flex; gap: .6em; justify-content: center; }
 .reveal .layer {
-  flex: 1; border-radius: 10px; padding: .5em .7em; text-align: center; font-size: .65em;
-  border: 2px solid $c-edge;
+  flex: 1; border-radius: 10px; padding: .5em .7em; text-align: center; font-size: .8em;
+  color: $c-dark;
 }
 .reveal .layer b { display: block; font-size: 1.15em; }
 .reveal .layer em { display: block; margin-bottom: .4em; }
 .reveal .l-struct { background: $c-grey; }
 .reveal .l-tech   { background: $c-orange; }
-.reveal .l-sem    { background: $c-salmon; }
+.reveal .l-sem    { background: $c-vibrant; }
 
 /* ---- hub diagram ("interoperable dataset can connect to an ecosystem") ---- */
 .reveal .eco {
@@ -103,61 +215,58 @@ $c-edge:   #6b4a2f;
     ". . abot . ."
     ". . bottom . .";
 }
-.reveal .eco .pill { margin: 0; font-size: .6em; }
-.reveal .eco .a { font-size: .5em; text-align: center; }
+.reveal .eco .pill { margin: 0; font-size: .8em; }
+.reveal .eco .a { font-size: .7em; text-align: center; }
 .reveal .eco .top { grid-area: top; } .reveal .eco .atop { grid-area: atop; }
 .reveal .eco .left { grid-area: left; } .reveal .eco .aleft { grid-area: aleft; }
-.reveal .eco .center { grid-area: center; font-size: .7em; }
+.reveal .eco .center { grid-area: center; font-size: .85em; }
 .reveal .eco .aright { grid-area: aright; } .reveal .eco .right { grid-area: right; }
 .reveal .eco .abot { grid-area: abot; } .reveal .eco .bottom { grid-area: bottom; }
-
-.reveal table { font-size: .6em; margin: 0 auto; background: #fff; }
-.reveal pre code { font-size: .7em; }
 
 /* keep tall character images from pushing content off the slide */
 .reveal .api-relevance { align-items: center; }
 .reveal .api-relevance img { max-height: 280px; width: auto; }
 
-/*-- scss:defaults --*/
-.callout.callout-style-simple {
-  background-color: #f5f5f5;
-}
+/* ---- callouts, focus and workflow blocks ---- */
+.callout.callout-style-simple { background-color: $c-offwhite; }
 
 .workflow {
   width: 55%;
   margin: 0 auto;
   text-align: center;
 }
-
-.reveal .slides section {
-  text-align: center;
-}
-
 .reveal .slides section .workflow {
   margin-left: auto;
   margin-right: auto;
 }
 
-.focus {
-  border: 3px solid #f28c28;
+.focus {                             // take-home message: Off White with a Vibrant Orange frame
+  background: $c-offwhite; color: $c-dark;
+  border: 3px solid $c-vibrant;
+  border-radius: 10px;
   padding: 1em;
   margin-top: 0.5em;
-  background: rgba(242, 140, 40, 0.06);
 }
 
-/*-- scss:rules --*/
+/* ---- tables: transparent so they sit on the Fresh Blue background ---- */
 .reveal .slides table {
   width: 100% !important;
+  margin: 0 auto;
   background: transparent !important;
-  color: inherit !important;
+  color: $c-dark !important;
   --bs-table-bg: transparent;
   --bs-table-striped-bg: transparent;
 }
-
 .reveal .slides table th,
 .reveal .slides table td,
 .reveal .slides table tr {
   background: transparent !important;
-  font-size: 2rem !important;   
+  color: $c-dark !important;
+  border-color: $c-dark !important;
+}
+.reveal .slides table th,
+.reveal .slides table td {
+  font-size: 1.9rem !important;
   padding: 0.5em 0.9em;
 }
+.reveal .slides table th { font-weight: $font-weight-bold; border-bottom: 2px solid $c-dark !important; }

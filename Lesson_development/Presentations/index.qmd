@@ -1,10 +1,12 @@
 ---
-title: "Unix & Git workshop"
-subtitle: "Slides, in order of the workshop"
+title: "Workshop landing page"
+
 format:
   html:
-    toc: false
+    theme: [default, styles.scss]
+    css: fonts.css
 ---
+
 
 The workshop slides, in the order they are presented:
 

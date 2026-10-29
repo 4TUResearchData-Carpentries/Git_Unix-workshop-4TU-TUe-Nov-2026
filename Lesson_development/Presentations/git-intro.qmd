@@ -1,8 +1,14 @@
 ---
 title: "Version control with Git"
+subtitle: "Software Carpentry Workshop"
 ---
 
-## Overview
+
+## MAKE ANALOGY TO A DIARY FOR THE IDEA OF VERSION CONTROL 
+AND THE PICTURE FOR THE GIT MODEL (ADD- PUT THE PEOPLE, OBJECTS YOU WANT, AND TAKE THE PICTURE WITH - COMMIT)
+
+
+## Overview 
 
 - Why Git
 - What is Git
