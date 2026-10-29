@@ -13,9 +13,9 @@
   },
   "hasCourseInstance": {
     "@type": "CourseInstance",
-    "startDate": "2026-04-22",
-    "endDate": "2026-04-23",
-    "url": "https://4turesearchdata-carpentries.github.io/2026-04-22-tudelft/",
+    "startDate": "2026-11-18",
+    "endDate": "2026-11-19",
+    "url": "https://4turesearchdata-carpentries.github.io/2026-11-18-tudelft/",
     "instructor": [
       {
         "@type": "Person",
@@ -24,8 +24,8 @@
       },
       {
       "@type": "Person",
-      "name": "John Bons",
-      "url": "https://about.me/JohnBons"
+      "name": "Tiernan O'Sullivan"
+      
     }
   ],
     "offers": {
