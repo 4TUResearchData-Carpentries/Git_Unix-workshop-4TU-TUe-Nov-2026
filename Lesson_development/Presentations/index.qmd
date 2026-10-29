@@ -1,5 +1,6 @@
 ---
-title: "Workshop landing page"
+title: "Introduction to Unix and version Control with Git workshop"
+subtitle: "18-19 November 2026, TU/e"
 
 format:
   html:
@@ -10,9 +11,13 @@ format:
 
 The workshop slides, in the order they are presented:
 
-1. [Intro](workshop-intro-day-1.html): welcome, schedule, team and code of conduct
-2. [Unix](unix-shell-introduction.html): Unix shell introduction
+1. [Introduction](workshop-intro-day-1.html): welcome, schedule, team and code of conduct
+2. [Unix shell intro](unix-shell-introduction.html): Unix shell introduction
 3. [Git intro](git-intro-lesson.html): version control with Git
 4. [Git remotes](git-remotes-intro-lesson.html): Git remotes and GitHub
+
+### Check your skills with Git! 
+
+[Quiz](https://tudelft.h5p.com/content/1292810526601181087/embed): This quiz tests your knowledge of Git, including how to create and clone a repository, add/commit changes to it and to push to/pull from a remote repository.
 
 Click a slide deck to open it. Inside a deck, press `F` for fullscreen, `S` for speaker view and `O` for the slide overview.

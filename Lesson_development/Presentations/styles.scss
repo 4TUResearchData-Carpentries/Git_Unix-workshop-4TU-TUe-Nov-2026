@@ -58,6 +58,24 @@ $code-block-font-size: $code-font-size;
 
 /*-- scss:rules --*/
 
+/* Reduce main paragraph and list text */
+.reveal .slides section p,
+.reveal .slides section li {
+  font-size: 0.93em;
+}
+
+
+/* Standard spacing for all slides */
+.reveal .slides section > h2 {
+  margin-bottom: 0.7em;
+}
+
+/* Extra spacing for slides with little content */
+.reveal .slides section.spacious-slide > h2 {
+  margin-bottom: 1.15em;
+}
+
+
 /* ---- global text and typography ---- */
 .reveal, .reveal .slides, .reveal p, .reveal li { color: $c-dark; }
 .reveal, .reveal .slides, .reveal p, .reveal li, .reveal td, .reveal th {

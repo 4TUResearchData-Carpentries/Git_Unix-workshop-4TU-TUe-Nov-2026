@@ -1,78 +1,66 @@
 ---
 title: Unix Shell introduction
-subtitle: Software Carpentry Workshop
+
 ---
 
 <!-- Converted from Unix-Shell-Introduction.pptx; 1 slide per original PPTX slide.
      Images are stored under ./images/unix-shell-introduction/. -->
 
-## Unix Shell introduction
-
-<!-- Source slide 1 -->
-
-::: {.columns}
-::: {.column width="53%"}
-**The Unix Shell**
-
-A command-line interface for working with files and automating repeated tasks.
-:::
-
-::: {.column width="47%"}
-![Colourful source-code photograph](images/unix-shell-introduction/slide-01-01-f500a9aa61.png){width="90%"}
-:::
-:::
-
 
 ## How humans interact with computers
 
-<!-- Source slide 2 -->
-
 ::: {.columns}
 ::: {.column width="33%"}
+::: {.fragment}
+
 ![Keyboard](images/unix-shell-introduction/slide-02-01-e01abb8198.png){width="42%"}
 
-**Keyboard**
-
 <small>The original text-based input method, which is direct and precise.</small>
+
+:::
 :::
 
 ::: {.column width="33%"}
+::: {.fragment}
+
 ![Touch Screens](images/unix-shell-introduction/slide-02-02-26fd392c8b.png){width="42%"}
 
-**Touch Screens**
-
 <small>Intuitive gestures for mobile and tablet environments.</small>
+
+:::
 :::
 
 ::: {.column width="33%"}
+::: {.fragment}
+
 ![Voice Recognition](images/unix-shell-introduction/slide-02-03-764b4f60ea.png){width="42%"}
 
-**Voice Recognition**
-
 <small>Natural language input, growing but still limited in precision.</small>
+
+:::
 :::
 :::
 
 ::: {.columns}
 ::: {.column width="50%"}
+::: {.fragment}
+
 ![Mouse & GUI](images/unix-shell-introduction/slide-02-04-1745419df3.png){width="42%"}
 
-**Mouse & GUI**
-
 <small>Graphical interfaces made computing accessible to everyone.</small>
+
+:::
 :::
 
 ::: {.column width="50%"}
+::: {.fragment}
+
 ![CLI](images/unix-shell-introduction/slide-02-05-ea31f416bc.png){width="42%"}
 
-**CLI**
-
 <small>Command-Line Interface: powerful, scriptable, and built for repetition.</small>
-:::
-:::
 
-::: {.notes}
-Over the decades, we've developed many ways to communicate with machines. Each has its strengths , but they're not all equal when it comes to efficiency.
+:::
+:::
 :::
 
 
@@ -82,51 +70,37 @@ Over the decades, we've developed many ways to communicate with machines. Each h
 
 ::: {.columns}
 ::: {.column width="53%"}
-![Hand using a mouse](images/unix-shell-introduction/slide-03-01-80482b9c3d.png){width="100%"}
+![](images/unix-shell-introduction/slide-03-01-80482b9c3d.png){width="100%"}
 :::
 
 ::: {.column width="47%"}
 **The problem**
 
-Imagine you need to create 50 directories, rename hundreds of files, or run the same operation across many datasets. In a GUI, that means copy-paste, click-click-click — wasting time and energy.
+Imagine you need to create 50 directories, rename hundreds of files, or run the same operation across many datasets. In a GUI, that means copy-paste, and hundreds of clicks. 
 
-::: {.note-box}
-The more repetitive the task, the greater the advantage of the CLI. A single command can replace hundreds of manual clicks.
 :::
 :::
-:::
-
 
 ## Key points about the Unix Shell
 
-<!-- Source slide 4 -->
+::: {.incremental}
 
-::: {.columns}
-::: {.column width="66%"}
-::: {.cream-box}
-**Decades of proven use**
+- **Unix was partly born out of a video game! (1969)**  
+  Ken Thompson's work on a space exploration game called *Space Travel* helped set the stage for developing Unix at Bell Labs. 🚀
 
-The Unix shell has been around for over 50 years, older than most of its users today. It has survived because it works.
+- **The name Unix started as a joke!**  
+  Unix was inspired by an older operating system called *Multics*. The name *Unics* was a playful reference to its simpler design. It eventually became *Unix*.
+
+- **Unix commands have strange names for a reason!**  
+  `grep` comes from an old text-editor instruction (`g/re/p`), while `cat` stands for *concatenate*, not the animal! 🐈
+
+- **One tiny symbol made Unix incredibly powerful: `|`**  
+  The pipe connects small programs, allowing the output of one command to become the input of another. Think of it as an assembly line for data!
+
+- **Technology from 1969 is still everywhere!**  
+  Unix-style commands are still used on Linux, macOS, research servers, and supercomputers. Learning the shell means learning a language that has survived generations of technology.
+
 :::
-
-::: {.cream-box}
-**Unmatched Productivity**
-
-Its longevity is no accident. The Unix shell is one of the most productive programming environments ever created, enabling complex workflows with minimal effort.
-:::
-
-::: {.cream-box}
-**Worth the Learning Curve**
-
-Graphical interfaces feel easier at first, but once you learn the terminal, you'll wonder how you ever worked without it.
-:::
-:::
-
-::: {.column width="34%"}
-![Computer laboratory photograph](images/unix-shell-introduction/slide-04-01-7352e13b81.png){width="76%"}
-:::
-:::
-
 
 ## Unix, Shell, Terminal, Bash — What’s the Difference?
 
@@ -153,62 +127,56 @@ These terms are often used interchangeably, but they refer to distinct layers of
 :::
 
 
-## What you’ll use today
+## What you’ll use today {.spacious-slide}
 
-<!-- Source slide 6 -->
 
-The exact tool depends on your operating system — but the commands you learn will work everywhere.
 
-::: {.columns}
-::: {.column width="50%"}
-::: {.cream-box}
-### 🪟 Windows
+::: {.fragment}
 
-**Git Bash** — a lightweight Bash emulation that comes bundled with Git for Windows. It gives you a Unix-like environment on a Windows machine.
-:::
-:::
+- **Git Bash (for windows users)** 🪟 
 
-::: {.column width="50%"}
-::: {.cream-box}
-### 🍎 macOS / 🐧 Linux
+A lightweight Bash emulation that comes bundled with Git for Windows. It gives you a Unix-like environment on a Windows machine.
 
-**Unix Shell** — the classic, native command-line environment. macOS and Linux ship with Bash (or Zsh) built right in. No extra installation needed.
-:::
-:::
 :::
 
 
-## You
+::: {.fragment}
+
+- **Unix shell (for the rest)** 🍎 /🐧 
+
+The classic, native command-line environment. macOS and Linux ship with Bash (or Zsh) built right in. No extra installation needed.
+
+:::
+
+
+
+
+
+## Target audience
 
 <!-- Source slide 7 -->
 
-::: {.columns}
-::: {.column width="61%"}
+
 This workshop is designed for **beginners**. No prior command-line experience is expected. We'll start from the very basics and build up together.
 
-::: {.cream-box}
-**No experience needed**
-
-We start from zero.
-:::
-
+::: {.fragment}
 ::: {.cream-box}
 **Hands-on practice**
 
-You'll type real commands as we go.
-:::
-
-::: {.cream-box}
-**Ask questions**
-
-There are no bad questions here.
+Live coding experience.
 :::
 :::
 
-::: {.column width="39%"}
-![Participant working on a laptop](images/unix-shell-introduction/slide-07-01-58d1865f4d.png){width="87%"}
+::: {.fragment}
+
+**Ask questions!!!**
+
+
+
+
 :::
-:::
+
+
 
 
 ## You
