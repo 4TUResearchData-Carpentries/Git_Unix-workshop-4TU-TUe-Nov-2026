@@ -7,7 +7,7 @@ Welcome to the **Git & Unix workshop**! for Eindhoven University of Technology, 
 **Links:**
 
 <!-- - Mentimeter Git Intro- https://edu.nl/cma84 -->
-- Collaborative notes- https://hackmd.io/W5GSXeJ_RJOE0DE0UsW5AA (FIX THIS)
+- Collaborative notes at https://edu.nl/8efu9 
 
 ## 🚀 Workshop Overview
 
