@@ -81,7 +81,7 @@ quarto check
 ### Working on the slides
 
 ```bash
-quarto preview unix.qmd   # live preview of one deck
+quarto preview unix-shell-introduction.qmd   # live preview of one deck
 quarto render                      # build everything into _site/
 ```
 
@@ -93,10 +93,12 @@ quarto render                      # build everything into _site/
 
 ### Automatic build
 
-`.github/workflows/publish.yml` renders the whole project on every push.
+`.github/workflows/slides.yml` renders the whole project on every push.
 The rendered site is attached to the run as the `slides` artifact.
 On `main` it is also published to GitHub Pages
-(Settings → Pages → Source: *GitHub Actions*).
+(Settings → Pages → Build and deployment: *Deploy from branch* → gh-pages → Save ).
+
+
 
 
 ## 🔗 Resources
