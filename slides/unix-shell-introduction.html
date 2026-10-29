@@ -34,7 +34,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="unix-shell-introduction_files/libs/revealjs/dist/theme/quarto-fd0b6508926a841bdabc5ba787f71276.css">
+  <link rel="stylesheet" href="unix-shell-introduction_files/libs/revealjs/dist/theme/quarto-4672ac1a1a3710580e85bd2d4d7d0910.css">
   <link rel="stylesheet" href="fonts.css">
   <link href="unix-shell-introduction_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="unix-shell-introduction_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -134,7 +134,6 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Unix Shell introduction</h1>
-  <p class="subtitle">Software Carpentry Workshop</p>
 
 <div class="quarto-title-authors">
 </div>
@@ -145,132 +144,88 @@
 <!-- Converted from Unix-Shell-Introduction.pptx; 1 slide per original PPTX slide.
      Images are stored under ./images/unix-shell-introduction/. -->
 </section>
-<section id="unix-shell-introduction" class="slide level2">
-<h2>Unix Shell introduction</h2>
-<!-- Source slide 1 -->
-<div class="columns">
-<div class="column" style="width:53%;">
-<p><strong>The Unix Shell</strong></p>
-<p>A command-line interface for working with files and automating repeated tasks.</p>
-</div><div class="column" style="width:47%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/unix-shell-introduction/slide-01-01-f500a9aa61.png" style="width:90.0%"></p>
-<figcaption>Colourful source-code photograph</figcaption>
-</figure>
-</div>
-</div></div>
-</section>
 <section id="how-humans-interact-with-computers" class="slide level2">
 <h2>How humans interact with computers</h2>
-<!-- Source slide 2 -->
 <div class="columns">
 <div class="column" style="width:33%;">
+<div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/unix-shell-introduction/slide-02-01-e01abb8198.png" style="width:42.0%"></p>
 <figcaption>Keyboard</figcaption>
 </figure>
 </div>
-<p><strong>Keyboard</strong></p>
 <p><small>The original text-based input method, which is direct and precise.</small></p>
+</div>
 </div><div class="column" style="width:33%;">
+<div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/unix-shell-introduction/slide-02-02-26fd392c8b.png" style="width:42.0%"></p>
 <figcaption>Touch Screens</figcaption>
 </figure>
 </div>
-<p><strong>Touch Screens</strong></p>
 <p><small>Intuitive gestures for mobile and tablet environments.</small></p>
+</div>
 </div><div class="column" style="width:33%;">
+<div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/unix-shell-introduction/slide-02-03-764b4f60ea.png" style="width:42.0%"></p>
 <figcaption>Voice Recognition</figcaption>
 </figure>
 </div>
-<p><strong>Voice Recognition</strong></p>
 <p><small>Natural language input, growing but still limited in precision.</small></p>
+</div>
 </div></div>
 <div class="columns">
 <div class="column" style="width:50%;">
+<div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/unix-shell-introduction/slide-02-04-1745419df3.png" style="width:42.0%"></p>
 <figcaption>Mouse &amp; GUI</figcaption>
 </figure>
 </div>
-<p><strong>Mouse &amp; GUI</strong></p>
 <p><small>Graphical interfaces made computing accessible to everyone.</small></p>
+</div>
 </div><div class="column" style="width:50%;">
+<div class="fragment">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/unix-shell-introduction/slide-02-05-ea31f416bc.png" style="width:42.0%"></p>
 <figcaption>CLI</figcaption>
 </figure>
 </div>
-<p><strong>CLI</strong></p>
 <p><small>Command-Line Interface: powerful, scriptable, and built for repetition.</small></p>
+</div>
 </div></div>
-<aside class="notes">
-<p>Over the decades, we’ve developed many ways to communicate with machines. Each has its strengths , but they’re not all equal when it comes to efficiency.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="guis-scale-poorly-with-repetitive-tasks" class="slide level2">
 <h2>GUIs scale poorly with repetitive tasks</h2>
 <!-- Source slide 3 -->
 <div class="columns">
 <div class="column" style="width:53%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
 <p><img data-src="images/unix-shell-introduction/slide-03-01-80482b9c3d.png" style="width:100.0%"></p>
-<figcaption>Hand using a mouse</figcaption>
-</figure>
-</div>
 </div><div class="column" style="width:47%;">
 <p><strong>The problem</strong></p>
-<p>Imagine you need to create 50 directories, rename hundreds of files, or run the same operation across many datasets. In a GUI, that means copy-paste, click-click-click — wasting time and energy.</p>
-<div class="note-box">
-<p>The more repetitive the task, the greater the advantage of the CLI. A single command can replace hundreds of manual clicks.</p>
-</div>
+<p>Imagine you need to create 50 directories, rename hundreds of files, or run the same operation across many datasets. In a GUI, that means copy-paste, and hundreds of clicks.</p>
 </div></div>
 </section>
 <section id="key-points-about-the-unix-shell" class="slide level2">
 <h2>Key points about the Unix Shell</h2>
-<!-- Source slide 4 -->
-<div class="columns">
-<div class="column" style="width:66%;">
-<div class="cream-box">
-<p><strong>Decades of proven use</strong></p>
-<p>The Unix shell has been around for over 50 years, older than most of its users today. It has survived because it works.</p>
-</div>
-<div class="cream-box">
-<p><strong>Unmatched Productivity</strong></p>
-<p>Its longevity is no accident. The Unix shell is one of the most productive programming environments ever created, enabling complex workflows with minimal effort.</p>
-</div>
-<div class="cream-box">
-<p><strong>Worth the Learning Curve</strong></p>
-<p>Graphical interfaces feel easier at first, but once you learn the terminal, you’ll wonder how you ever worked without it.</p>
-</div>
-</div><div class="column" style="width:34%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/unix-shell-introduction/slide-04-01-7352e13b81.png" style="width:76.0%"></p>
-<figcaption>Computer laboratory photograph</figcaption>
-</figure>
-</div>
-</div></div>
+<ul>
+<li class="fragment"><p><strong>Unix was partly born out of a video game! (1969)</strong><br>
+Ken Thompson’s work on a space exploration game called <em>Space Travel</em> helped set the stage for developing Unix at Bell Labs. 🚀</p></li>
+<li class="fragment"><p><strong>The name Unix started as a joke!</strong><br>
+Unix was inspired by an older operating system called <em>Multics</em>. The name <em>Unics</em> was a playful reference to its simpler design. It eventually became <em>Unix</em>.</p></li>
+<li class="fragment"><p><strong>Unix commands have strange names for a reason!</strong><br>
+<code>grep</code> comes from an old text-editor instruction (<code>g/re/p</code>), while <code>cat</code> stands for <em>concatenate</em>, not the animal! 🐈</p></li>
+<li class="fragment"><p><strong>One tiny symbol made Unix incredibly powerful: <code>|</code></strong><br>
+The pipe connects small programs, allowing the output of one command to become the input of another. Think of it as an assembly line for data!</p></li>
+<li class="fragment"><p><strong>Technology from 1969 is still everywhere!</strong><br>
+Unix-style commands are still used on Linux, macOS, research servers, and supercomputers. Learning the shell means learning a language that has survived generations of technology.</p></li>
+</ul>
 </section>
 <section id="unix-shell-terminal-bash-whats-the-difference" class="slide level2">
 <h2>Unix, Shell, Terminal, Bash — What’s the Difference?</h2>
@@ -292,51 +247,36 @@
 <p><strong>Bash</strong> — A specific, widely used implementation of a Unix shell.</p>
 </div></div>
 </section>
-<section id="what-youll-use-today" class="slide level2">
+<section id="what-youll-use-today" class="slide level2 spacious-slide">
 <h2>What you’ll use today</h2>
-<!-- Source slide 6 -->
-<p>The exact tool depends on your operating system — but the commands you learn will work everywhere.</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<section id="windows" class="cream-box">
-<h3>🪟 Windows</h3>
-<p><strong>Git Bash</strong> — a lightweight Bash emulation that comes bundled with Git for Windows. It gives you a Unix-like environment on a Windows machine.</p>
-</section>
-</div><div class="column" style="width:50%;">
-<section id="macos-linux" class="cream-box">
-<h3>🍎 macOS / 🐧 Linux</h3>
-<p><strong>Unix Shell</strong> — the classic, native command-line environment. macOS and Linux ship with Bash (or Zsh) built right in. No extra installation needed.</p>
-</section>
-</div></div>
-</section>
-<section id="you" class="slide level2">
-<h2>You</h2>
-<!-- Source slide 7 -->
-<div class="columns">
-<div class="column" style="width:61%;">
-<p>This workshop is designed for <strong>beginners</strong>. No prior command-line experience is expected. We’ll start from the very basics and build up together.</p>
-<div class="cream-box">
-<p><strong>No experience needed</strong></p>
-<p>We start from zero.</p>
+<div class="fragment">
+<ul>
+<li><strong>Git Bash (for windows users)</strong> 🪟</li>
+</ul>
+<p>A lightweight Bash emulation that comes bundled with Git for Windows. It gives you a Unix-like environment on a Windows machine.</p>
 </div>
+<div class="fragment">
+<ul>
+<li><strong>Unix shell (for the rest)</strong> 🍎 /🐧</li>
+</ul>
+<p>The classic, native command-line environment. macOS and Linux ship with Bash (or Zsh) built right in. No extra installation needed.</p>
+</div>
+</section>
+<section id="target-audience" class="slide level2">
+<h2>Target audience</h2>
+<!-- Source slide 7 -->
+<p>This workshop is designed for <strong>beginners</strong>. No prior command-line experience is expected. We’ll start from the very basics and build up together.</p>
+<div class="fragment">
 <div class="cream-box">
 <p><strong>Hands-on practice</strong></p>
-<p>You’ll type real commands as we go.</p>
+<p>Live coding experience.</p>
 </div>
-<div class="cream-box">
-<p><strong>Ask questions</strong></p>
-<p>There are no bad questions here.</p>
 </div>
-</div><div class="column" style="width:39%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/unix-shell-introduction/slide-07-01-58d1865f4d.png" style="width:87.0%"></p>
-<figcaption>Participant working on a laptop</figcaption>
-</figure>
+<div class="fragment">
+<p><strong>Ask questions!!!</strong></p>
 </div>
-</div></div>
 </section>
-<section id="you-1" class="slide level2">
+<section id="you" class="slide level2">
 <h2>You</h2>
 <!-- Source slide 8 -->
 <div class="columns">
