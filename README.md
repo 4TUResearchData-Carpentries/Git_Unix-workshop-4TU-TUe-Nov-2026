@@ -1,13 +1,13 @@
 # Introduction to version control with Git 
 
-Welcome to the **Git & Unix workshop**! for Eindhoven University of Technology, on 22-23 April 2026.  This repository contains instructions for the two-day hands-on workshop focused on **how to interact with the Unix terminal**, **version control with Git**, **collaborative best practices**, and **getting to know [4TU.ResearchData](data.4tu.nl)**.
+Welcome to the **Git & Unix workshop**! for Eindhoven University of Technology, on 18-19 November, 2026.  This repository contains instructions for the two-day hands-on workshop focused on **how to interact with the Unix terminal**, **version control with Git**, **collaborative best practices**, and **getting to know [4TU.ResearchData](data.4tu.nl)**.
 
 [![schema.org Course](https://img.shields.io/badge/schema--org-Course-blue.svg)](./schema-course.jsonld)
 
 **Links:**
 
 <!-- - Mentimeter Git Intro- https://edu.nl/cma84 -->
-- Collaborative notes- https://hackmd.io/W5GSXeJ_RJOE0DE0UsW5AA 
+- Collaborative notes- https://hackmd.io/W5GSXeJ_RJOE0DE0UsW5AA (FIX THIS)
 
 ## 🚀 Workshop Overview
 
@@ -64,6 +64,39 @@ Before attending the workshop, please ensure you have:
 - **[Git Lesson](Lesson_development/git_lesson_verbosed_structure.md)**: Introduction to Git, tracking changes, and collaborating on research projects.
 
 - [Collaborative document](https://edu.nl/htaw9)
+
+## Quarto slides Prerequisites
+ 
+Rendering the slides locally requires:
+ 
+- [Quarto](https://quarto.org/docs/get-started/)
+- A recent web browser for previewing slides
+ 
+Verify your installation:
+ 
+```bash
+quarto check
+```
+
+### Working on the slides
+
+```bash
+quarto preview unix.qmd   # live preview of one deck
+quarto render                      # build everything into _site/
+```
+
+* Shared options (theme, logo, size, transitions) live in `_quarto.yml`.
+* Colours, boxes and layout helpers live in `styles.scss`.
+* A new deck is a new `NN-name.qmd` with only a `title` and `subtitle` in its header.
+  Add it to `index.qmd`.
+* Images go in `images/<deck>/`; things used by several decks go in `images/shared/`.
+
+### Automatic build
+
+`.github/workflows/publish.yml` renders the whole project on every push.
+The rendered site is attached to the run as the `slides` artifact.
+On `main` it is also published to GitHub Pages
+(Settings → Pages → Source: *GitHub Actions*).
 
 
 ## 🔗 Resources

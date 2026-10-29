@@ -1,0 +1,186 @@
+---
+title: Welcome to the Unix & Git workshop
+---
+
+<!-- Converted from Workshop-intro-day-1.pptx; 1 slide per original PPTX slide.
+     Images are stored under ./images/workshop-intro-day-1/. -->
+
+## Welcome to the Unix & Git workshop
+
+<!-- Source slide 1 -->
+
+::: {.dark-box}
+![4TU.ResearchData logo](images/workshop-intro-day-1/slide-01-01-929bc0971f.png){width="37%"}
+:::
+
+::: {.pill .p-orange}
+Unix • Git • hands-on
+:::
+
+
+## Schedule
+
+<!-- Source slide 2 -->
+
+::: {.columns}
+::: {.column width="50%"}
+::: {.box}
+### Day 1
+
+**Unix + Local version control (Git)**
+:::
+:::
+
+::: {.column width="50%"}
+::: {.note-box}
+### Day 2
+
+**Collaborative Git + What is 4TU.ResearchData**
+:::
+:::
+:::
+
+
+## Program of today (Day 1)
+
+<!-- Source slide 3 -->
+
+| Time | Activity |
+|:--|:--|
+| 09:30–12:00 | Introduction to the Unix shell |
+| 10:45–11:00 | **Break** |
+| 12:00–13:00 | **Lunch** |
+| 13:00–16:30 | Version control with Git |
+| 14:15–14:30 | **Break** |
+| 16:30 | End of workshop — Day 1 |
+
+
+## The team of the workshop
+
+<!-- Source slide 4 -->
+
+### Instructors & helpers
+
+::: {.columns}
+::: {.column width="33%"}
+![Leila Iñigo](images/workshop-intro-day-1/slide-04-03-3f7063481c.jpg){width="55%"}
+
+**Leila Iñigo**
+
+<small>Trainer of Digital Skills at 4TU.ResearchData</small>
+:::
+
+::: {.column width="33%"}
+![John Bons](images/workshop-intro-day-1/slide-04-04-2be2952494.jpg){width="55%"}
+
+**John Bons**
+
+<small>Research IT Consultant, Department of Built Environment</small>
+:::
+
+::: {.column width="33%"}
+![Özgün Balaban](images/workshop-intro-day-1/slide-04-05-a3a096792b.jpg){width="55%"}
+
+**Özgün Balaban**
+
+<small>Postdoc, Built Environment, Information Systems in the Built Environment</small>
+:::
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+![Dylan Feldner-Busztin](images/workshop-intro-day-1/slide-04-06-7b58fb59cf.jpg){width="55%"}
+
+**Dylan Feldner-Busztin**
+
+<small>Data Manager, Research Center for Materials-Driven Regeneration</small>
+:::
+
+::: {.column width="50%"}
+![Linda Chen – Zijlstra](images/workshop-intro-day-1/slide-04-07-f8a1f95f34.jpg){width="55%"}
+
+**Linda Chen – Zijlstra**
+
+<small>Research IT consultant, Department of Biomedical Engineering</small>
+:::
+:::
+
+
+## The team of the workshop
+
+<!-- Source slide 5 -->
+
+### You!
+
+**Faculty**
+
+![Pie chart of workshop participant faculties](images/workshop-intro-day-1/slide-05-faculty-chart.svg){width=75%}
+
+<small>Chart recreated from the editable chart data in the original PowerPoint.</small>
+
+::: {.notes}
+Original PowerPoint chart values: Built Environment: 0.6364, Biomedical Engineering: 0.0909, Applied Mathematics: 0.0909, Unknown: 0.0909. The displayed SVG normalizes them to 100%.
+:::
+
+
+## Code of Conduct
+
+<!-- Source slide 6 -->
+
+::: {.columns}
+::: {.column width="36%"}
+![The Carpentries logo](images/workshop-intro-day-1/slide-06-03-1a78f88419.png){width="90%"}
+
+<small>The Carpentries teaches foundational coding and data science skills to researchers worldwide.</small>
+:::
+
+::: {.column width="64%"}
+- Use welcoming and inclusive language
+- Be respectful of different viewpoints and experiences
+- Gracefully accept constructive criticism
+- Show courtesy and respect towards others during the workshop
+:::
+:::
+
+
+## Ice breaker
+
+<!-- Source slide 7 -->
+
+Go to **[https://edu.nl/vdm9f](https://edu.nl/vdm9f)**
+
+**On the goat-scale, how are you feeling today?**
+
+![Goat-scale mood check with six goats](images/workshop-intro-day-1/slide-07-03-a7626b7c67.png){width="58%"}
+
+
+## Let's start!!!
+
+<!-- Source slide 8 -->
+
+::: {.columns}
+::: {.column width="50%"}
+![Goat-scale icebreaker illustration](images/workshop-intro-day-1/slide-07-03-a7626b7c67.png){width="90%"}
+:::
+
+::: {.column width="50%"}
+::: {.bubble}
+**Let's start!!!**
+:::
+:::
+:::
+
+
+## Energyser
+
+<!-- Source slide 9 -->
+
+<video controls preload="metadata" style="max-height: 480px; max-width: 92%;">
+  <source src="images/workshop-intro-day-1/energyser.mp4" type="video/mp4">
+  Your browser does not support video playback.
+</video>
+
+::: {.notes}
+The original PowerPoint slide contains an embedded MP4 video. It has been preserved as an independent file.
+:::
+

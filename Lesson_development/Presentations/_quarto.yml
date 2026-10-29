@@ -19,6 +19,6 @@ format:
     hash: true
     transition: fade
     highlight-style: a11y   # accessible code colours, readable on the Off White code background
-    footer: "TRAINING NAME / ORGANISATION"
+    # footer: "TRAINING NAME / ORGANISATION"
     # logo: img/logo.png   # uncomment and add your logo; positioned by .slide-logo in styles.scss
 

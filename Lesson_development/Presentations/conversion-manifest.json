@@ -1,0 +1,914 @@
+{
+  "unix-shell-introduction": {
+    "original": "Unix-Shell-Introduction.pptx",
+    "slides": 11,
+    "assets": 14,
+    "slide_images": {
+      "1": [
+        {
+          "filename": "slide-01-01-f500a9aa61.png",
+          "shape": "Image 0",
+          "sha": "f500a9aa61",
+          "px": [
+            1440,
+            2160
+          ]
+        }
+      ],
+      "2": [
+        {
+          "filename": "slide-02-01-e01abb8198.png",
+          "shape": "Image 0",
+          "sha": "e01abb8198",
+          "px": [
+            308,
+            308
+          ]
+        },
+        {
+          "filename": "slide-02-02-26fd392c8b.png",
+          "shape": "Image 1",
+          "sha": "26fd392c8b",
+          "px": [
+            308,
+            308
+          ]
+        },
+        {
+          "filename": "slide-02-03-764b4f60ea.png",
+          "shape": "Image 2",
+          "sha": "764b4f60ea",
+          "px": [
+            308,
+            308
+          ]
+        },
+        {
+          "filename": "slide-02-04-1745419df3.png",
+          "shape": "Image 3",
+          "sha": "1745419df3",
+          "px": [
+            308,
+            308
+          ]
+        },
+        {
+          "filename": "slide-02-05-ea31f416bc.png",
+          "shape": "Image 4",
+          "sha": "ea31f416bc",
+          "px": [
+            308,
+            308
+          ]
+        }
+      ],
+      "3": [
+        {
+          "filename": "slide-03-01-80482b9c3d.png",
+          "shape": "Image 0",
+          "sha": "80482b9c3d",
+          "px": [
+            2068,
+            1378
+          ]
+        },
+        {
+          "filename": "slide-03-02-53286a5311.png",
+          "shape": "Image 1",
+          "sha": "53286a5311",
+          "px": [
+            70,
+            56
+          ]
+        }
+      ],
+      "4": [
+        {
+          "filename": "slide-04-01-7352e13b81.png",
+          "shape": "Image 0",
+          "sha": "7352e13b81",
+          "px": [
+            1440,
+            2160
+          ]
+        }
+      ],
+      "5": [
+        {
+          "filename": "slide-05-01-012397bbd5.png",
+          "shape": "Image 0",
+          "sha": "012397bbd5",
+          "px": [
+            1652,
+            1652
+          ]
+        }
+      ],
+      "6": [],
+      "7": [
+        {
+          "filename": "slide-07-01-58d1865f4d.png",
+          "shape": "Image 0",
+          "sha": "58d1865f4d",
+          "px": [
+            1440,
+            2160
+          ]
+        }
+      ],
+      "8": [
+        {
+          "filename": "slide-07-01-58d1865f4d.png",
+          "shape": "Image 0",
+          "sha": "58d1865f4d",
+          "px": [
+            1440,
+            2160
+          ]
+        },
+        {
+          "filename": "slide-08-02-c727f06ce0.png",
+          "shape": "Picture 4",
+          "sha": "c727f06ce0",
+          "px": [
+            778,
+            366
+          ]
+        }
+      ],
+      "9": [
+        {
+          "filename": "slide-09-01-53bc33319a.png",
+          "shape": "Image 0",
+          "sha": "53bc33319a",
+          "px": [
+            1440,
+            2160
+          ]
+        }
+      ],
+      "10": [
+        {
+          "filename": "slide-10-01-64ed3dd2e1.png",
+          "shape": "Image 0",
+          "sha": "64ed3dd2e1",
+          "px": [
+            768,
+            1152
+          ]
+        }
+      ],
+      "11": []
+    },
+    "missing_linked": [
+      {
+        "slide": 10,
+        "shape": "Image 1",
+        "reason": "no embedded image"
+      },
+      {
+        "slide": 10,
+        "shape": "Image 2",
+        "reason": "no embedded image"
+      },
+      {
+        "slide": 10,
+        "shape": "Image 3",
+        "reason": "no embedded image"
+      },
+      {
+        "slide": 10,
+        "shape": "Image 4",
+        "reason": "no embedded image"
+      },
+      {
+        "slide": 10,
+        "shape": "Image 5",
+        "reason": "no embedded image"
+      }
+    ],
+    "hidden_slides": [],
+    "references_in_qmd": 14
+  },
+  "workshop-intro-day-1": {
+    "original": "Workshop-intro-day-1.pptx",
+    "slides": 9,
+    "assets": 9,
+    "slide_images": {
+      "1": [
+        {
+          "filename": "slide-01-01-929bc0971f.png",
+          "shape": "Google Shape;588;p7",
+          "sha": "929bc0971f",
+          "px": [
+            2500,
+            664
+          ]
+        },
+        {
+          "filename": "slide-01-02-0d80a1a135.png",
+          "shape": "Google Shape;589;p7",
+          "sha": "0d80a1a135",
+          "px": [
+            1395,
+            1395
+          ]
+        }
+      ],
+      "2": [
+        {
+          "filename": "slide-01-01-929bc0971f.png",
+          "shape": "Google Shape;588;p7",
+          "sha": "929bc0971f",
+          "px": [
+            2500,
+            664
+          ]
+        },
+        {
+          "filename": "slide-01-02-0d80a1a135.png",
+          "shape": "Google Shape;589;p7",
+          "sha": "0d80a1a135",
+          "px": [
+            1395,
+            1395
+          ]
+        }
+      ],
+      "3": [
+        {
+          "filename": "slide-01-01-929bc0971f.png",
+          "shape": "Google Shape;588;p7",
+          "sha": "929bc0971f",
+          "px": [
+            2500,
+            664
+          ]
+        },
+        {
+          "filename": "slide-01-02-0d80a1a135.png",
+          "shape": "Google Shape;589;p7",
+          "sha": "0d80a1a135",
+          "px": [
+            1395,
+            1395
+          ]
+        }
+      ],
+      "4": [
+        {
+          "filename": "slide-01-01-929bc0971f.png",
+          "shape": "Google Shape;588;p7",
+          "sha": "929bc0971f",
+          "px": [
+            2500,
+            664
+          ]
+        },
+        {
+          "filename": "slide-01-02-0d80a1a135.png",
+          "shape": "Google Shape;589;p7",
+          "sha": "0d80a1a135",
+          "px": [
+            1395,
+            1395
+          ]
+        },
+        {
+          "filename": "slide-04-03-3f7063481c.jpg",
+          "shape": "Picture 2",
+          "sha": "3f7063481c",
+          "px": [
+            3536,
+            3920
+          ]
+        },
+        {
+          "filename": "slide-04-04-2be2952494.jpg",
+          "shape": "Picture 2",
+          "sha": "2be2952494",
+          "px": [
+            200,
+            200
+          ]
+        },
+        {
+          "filename": "slide-04-05-a3a096792b.jpg",
+          "shape": "Picture 4",
+          "sha": "a3a096792b",
+          "px": [
+            195,
+            259
+          ]
+        },
+        {
+          "filename": "slide-04-06-7b58fb59cf.jpg",
+          "shape": "Picture 6",
+          "sha": "7b58fb59cf",
+          "px": [
+            209,
+            242
+          ]
+        },
+        {
+          "filename": "slide-04-07-f8a1f95f34.jpg",
+          "shape": "Picture 8",
+          "sha": "f8a1f95f34",
+          "px": [
+            225,
+            225
+          ]
+        }
+      ],
+      "5": [
+        {
+          "filename": "slide-01-01-929bc0971f.png",
+          "shape": "Google Shape;588;p7",
+          "sha": "929bc0971f",
+          "px": [
+            2500,
+            664
+          ]
+        },
+        {
+          "filename": "slide-01-02-0d80a1a135.png",
+          "shape": "Google Shape;589;p7",
+          "sha": "0d80a1a135",
+          "px": [
+            1395,
+            1395
+          ]
+        }
+      ],
+      "6": [
+        {
+          "filename": "slide-01-01-929bc0971f.png",
+          "shape": "Google Shape;606;p9",
+          "sha": "929bc0971f",
+          "px": [
+            2500,
+            664
+          ]
+        },
+        {
+          "filename": "slide-01-02-0d80a1a135.png",
+          "shape": "Google Shape;607;p9",
+          "sha": "0d80a1a135",
+          "px": [
+            1395,
+            1395
+          ]
+        },
+        {
+          "filename": "slide-06-03-1a78f88419.png",
+          "shape": "Google Shape;200;p7",
+          "sha": "1a78f88419",
+          "px": [
+            500,
+            103
+          ]
+        }
+      ],
+      "7": [
+        {
+          "filename": "slide-01-01-929bc0971f.png",
+          "shape": "Google Shape;606;p9",
+          "sha": "929bc0971f",
+          "px": [
+            2500,
+            664
+          ]
+        },
+        {
+          "filename": "slide-01-02-0d80a1a135.png",
+          "shape": "Google Shape;607;p9",
+          "sha": "0d80a1a135",
+          "px": [
+            1395,
+            1395
+          ]
+        },
+        {
+          "filename": "slide-07-03-a7626b7c67.png",
+          "shape": "Picture 2",
+          "sha": "a7626b7c67",
+          "px": [
+            865,
+            576
+          ]
+        }
+      ],
+      "8": [
+        {
+          "filename": "slide-01-01-929bc0971f.png",
+          "shape": "Google Shape;606;p9",
+          "sha": "929bc0971f",
+          "px": [
+            2500,
+            664
+          ]
+        },
+        {
+          "filename": "slide-01-02-0d80a1a135.png",
+          "shape": "Google Shape;607;p9",
+          "sha": "0d80a1a135",
+          "px": [
+            1395,
+            1395
+          ]
+        },
+        {
+          "filename": "slide-07-03-a7626b7c67.png",
+          "shape": "Picture 2",
+          "sha": "a7626b7c67",
+          "px": [
+            865,
+            576
+          ]
+        }
+      ],
+      "9": []
+    },
+    "missing_linked": [],
+    "hidden_slides": [],
+    "video": "images/workshop-intro-day-1/energyser.mp4",
+    "chart": {
+      "svg": "images/workshop-intro-day-1/slide-05-faculty-chart.svg",
+      "categories": [
+        "Built Environment",
+        "Biomedical Engineering",
+        "Applied Mathematics",
+        "Unknown"
+      ],
+      "values": [
+        0.6363636363636364,
+        0.09090909090909091,
+        0.09090909090909091,
+        0.09090909090909091
+      ],
+      "normalized_chart_shares": [
+        0.7,
+        0.1,
+        0.1,
+        0.1
+      ]
+    },
+    "references_in_qmd": 11
+  },
+  "git-intro-lesson": {
+    "original": "Git-intro-lesson.pptx",
+    "slides": 26,
+    "assets": 17,
+    "slide_images": {
+      "1": [
+        {
+          "filename": "slide-01-01-70765e1f39.png",
+          "shape": "Picture 2",
+          "sha": "70765e1f39",
+          "px": [
+            1024,
+            1024
+          ]
+        }
+      ],
+      "2": [],
+      "3": [],
+      "4": [
+        {
+          "filename": "slide-04-01-e20ee9f1ab.png",
+          "shape": "Picture 2",
+          "sha": "e20ee9f1ab",
+          "px": [
+            600,
+            800
+          ]
+        },
+        {
+          "filename": "slide-04-02-5b4b1d78c7.gif",
+          "shape": "Picture 5",
+          "sha": "5b4b1d78c7",
+          "px": [
+            600,
+            484
+          ]
+        }
+      ],
+      "5": [
+        {
+          "filename": "slide-05-01-bb5a1ef5ea.png",
+          "shape": "Picture 2",
+          "sha": "bb5a1ef5ea",
+          "px": [
+            181,
+            279
+          ]
+        },
+        {
+          "filename": "slide-05-02-c1c46fe862.jpg",
+          "shape": "Picture 4",
+          "sha": "c1c46fe862",
+          "px": [
+            216,
+            233
+          ]
+        },
+        {
+          "filename": "slide-05-03-8ec2483c8b.png",
+          "shape": "Picture 6",
+          "sha": "8ec2483c8b",
+          "px": [
+            216,
+            233
+          ]
+        }
+      ],
+      "6": [
+        {
+          "filename": "slide-05-01-bb5a1ef5ea.png",
+          "shape": "Picture 2",
+          "sha": "bb5a1ef5ea",
+          "px": [
+            181,
+            279
+          ]
+        },
+        {
+          "filename": "slide-05-02-c1c46fe862.jpg",
+          "shape": "Picture 4",
+          "sha": "c1c46fe862",
+          "px": [
+            216,
+            233
+          ]
+        },
+        {
+          "filename": "slide-05-03-8ec2483c8b.png",
+          "shape": "Picture 6",
+          "sha": "8ec2483c8b",
+          "px": [
+            216,
+            233
+          ]
+        }
+      ],
+      "7": [
+        {
+          "filename": "slide-05-01-bb5a1ef5ea.png",
+          "shape": "Picture 2",
+          "sha": "bb5a1ef5ea",
+          "px": [
+            181,
+            279
+          ]
+        },
+        {
+          "filename": "slide-05-02-c1c46fe862.jpg",
+          "shape": "Picture 4",
+          "sha": "c1c46fe862",
+          "px": [
+            216,
+            233
+          ]
+        },
+        {
+          "filename": "slide-05-03-8ec2483c8b.png",
+          "shape": "Picture 6",
+          "sha": "8ec2483c8b",
+          "px": [
+            216,
+            233
+          ]
+        }
+      ],
+      "8": [
+        {
+          "filename": "slide-05-01-bb5a1ef5ea.png",
+          "shape": "Picture 2",
+          "sha": "bb5a1ef5ea",
+          "px": [
+            181,
+            279
+          ]
+        },
+        {
+          "filename": "slide-05-02-c1c46fe862.jpg",
+          "shape": "Picture 4",
+          "sha": "c1c46fe862",
+          "px": [
+            216,
+            233
+          ]
+        },
+        {
+          "filename": "slide-05-03-8ec2483c8b.png",
+          "shape": "Picture 6",
+          "sha": "8ec2483c8b",
+          "px": [
+            216,
+            233
+          ]
+        }
+      ],
+      "9": [
+        {
+          "filename": "slide-05-01-bb5a1ef5ea.png",
+          "shape": "Picture 2",
+          "sha": "bb5a1ef5ea",
+          "px": [
+            181,
+            279
+          ]
+        },
+        {
+          "filename": "slide-05-02-c1c46fe862.jpg",
+          "shape": "Picture 4",
+          "sha": "c1c46fe862",
+          "px": [
+            216,
+            233
+          ]
+        },
+        {
+          "filename": "slide-05-03-8ec2483c8b.png",
+          "shape": "Picture 6",
+          "sha": "8ec2483c8b",
+          "px": [
+            216,
+            233
+          ]
+        }
+      ],
+      "10": [],
+      "11": [],
+      "12": [],
+      "13": [
+        {
+          "filename": "slide-13-01-5f139a1ce3.png",
+          "shape": "Picture 2",
+          "sha": "5f139a1ce3",
+          "px": [
+            320,
+            346
+          ]
+        }
+      ],
+      "14": [
+        {
+          "filename": "slide-14-01-bf61659951.png",
+          "shape": "Picture 4",
+          "sha": "bf61659951",
+          "px": [
+            910,
+            380
+          ]
+        }
+      ],
+      "15": [],
+      "16": [],
+      "17": [],
+      "18": [
+        {
+          "filename": "slide-18-01-fc95f6d9a9.png",
+          "shape": "Picture 4",
+          "sha": "fc95f6d9a9",
+          "px": [
+            250,
+            250
+          ]
+        }
+      ],
+      "19": [
+        {
+          "filename": "slide-19-01-63a0fbeafb.jpg",
+          "shape": "Picture 2",
+          "sha": "63a0fbeafb",
+          "px": [
+            267,
+            189
+          ]
+        }
+      ],
+      "20": [
+        {
+          "filename": "slide-20-01-ab8b000916.png",
+          "shape": "Picture 6",
+          "sha": "ab8b000916",
+          "px": [
+            3931,
+            1524
+          ]
+        }
+      ],
+      "21": [
+        {
+          "filename": "slide-21-01-51aa6c3267.png",
+          "shape": "Picture 4",
+          "sha": "51aa6c3267",
+          "px": [
+            1920,
+            1200
+          ]
+        }
+      ],
+      "22": [
+        {
+          "filename": "slide-22-01-cfb6eab014.png",
+          "shape": "Picture 4",
+          "sha": "cfb6eab014",
+          "px": [
+            1920,
+            1200
+          ]
+        }
+      ],
+      "23": [
+        {
+          "filename": "slide-23-01-70934dccbb.png",
+          "shape": "Picture 3",
+          "sha": "70934dccbb",
+          "px": [
+            3931,
+            1524
+          ]
+        }
+      ],
+      "24": [
+        {
+          "filename": "slide-24-01-7208de8c60.png",
+          "shape": "Picture 4",
+          "sha": "7208de8c60",
+          "px": [
+            3931,
+            1971
+          ]
+        }
+      ],
+      "25": [
+        {
+          "filename": "slide-25-01-016a71b295.png",
+          "shape": "Picture 2",
+          "sha": "016a71b295",
+          "px": [
+            513,
+            376
+          ]
+        }
+      ],
+      "26": [
+        {
+          "filename": "slide-26-01-76974462e3.png",
+          "shape": "Picture 4",
+          "sha": "76974462e3",
+          "px": [
+            586,
+            380
+          ]
+        }
+      ]
+    },
+    "missing_linked": [],
+    "hidden_slides": [
+      13,
+      14,
+      17
+    ],
+    "references_in_qmd": 29
+  },
+  "git-remotes-intro-lesson": {
+    "original": "Git-remotes-intro-lesson.pptx",
+    "slides": 10,
+    "assets": 9,
+    "slide_images": {
+      "1": [],
+      "2": [],
+      "3": [
+        {
+          "filename": "slide-03-01-4d7a481a15.png",
+          "shape": "Picture 4",
+          "sha": "4d7a481a15",
+          "px": [
+            341,
+            148
+          ]
+        }
+      ],
+      "4": [
+        {
+          "filename": "slide-04-01-76a9fadabe.jpg",
+          "shape": "Picture 2",
+          "sha": "76a9fadabe",
+          "px": [
+            318,
+            159
+          ]
+        },
+        {
+          "filename": "slide-04-01-76a9fadabe.jpg",
+          "shape": "Picture 2",
+          "sha": "76a9fadabe",
+          "px": [
+            318,
+            159
+          ]
+        },
+        {
+          "filename": "slide-04-01-76a9fadabe.jpg",
+          "shape": "Picture 2",
+          "sha": "76a9fadabe",
+          "px": [
+            318,
+            159
+          ]
+        }
+      ],
+      "5": [],
+      "6": [
+        {
+          "filename": "slide-06-01-63a0fbeafb.jpg",
+          "shape": "Picture 2",
+          "sha": "63a0fbeafb",
+          "px": [
+            267,
+            189
+          ]
+        }
+      ],
+      "7": [
+        {
+          "filename": "slide-07-01-d4b9755626.png",
+          "shape": "Picture 6",
+          "sha": "d4b9755626",
+          "px": [
+            390,
+            280
+          ]
+        }
+      ],
+      "8": [
+        {
+          "filename": "slide-08-01-bb5a1ef5ea.png",
+          "shape": "Picture 2",
+          "sha": "bb5a1ef5ea",
+          "px": [
+            181,
+            279
+          ]
+        },
+        {
+          "filename": "slide-08-02-8ec2483c8b.png",
+          "shape": "Picture 6",
+          "sha": "8ec2483c8b",
+          "px": [
+            216,
+            233
+          ]
+        },
+        {
+          "filename": "slide-08-03-0e6c9a4612.png",
+          "shape": "Picture 6",
+          "sha": "0e6c9a4612",
+          "px": [
+            201,
+            250
+          ]
+        },
+        {
+          "filename": "slide-08-03-0e6c9a4612.png",
+          "shape": "Picture 6",
+          "sha": "0e6c9a4612",
+          "px": [
+            201,
+            250
+          ]
+        }
+      ],
+      "9": [
+        {
+          "filename": "slide-09-01-68e331dc20.png",
+          "shape": "Picture 1",
+          "sha": "68e331dc20",
+          "px": [
+            3931,
+            2057
+          ]
+        }
+      ],
+      "10": [
+        {
+          "filename": "slide-10-01-0d549e3781.png",
+          "shape": "Picture 5",
+          "sha": "0d549e3781",
+          "px": [
+            3931,
+            2057
+          ]
+        }
+      ]
+    },
+    "missing_linked": [],
+    "hidden_slides": [
+      8
+    ],
+    "references_in_qmd": 10
+  }
+}

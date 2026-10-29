@@ -10,9 +10,9 @@ format:
 
 The workshop slides, in the order they are presented:
 
-1. [Intro](intro.html): welcome, schedule, team and code of conduct
-2. [Unix](unix.html): Unix shell introduction
-3. [Git intro](git-intro.html): version control with Git
-4. [Git remotes](git-remotes.html): Git remotes and GitHub
+1. [Intro](workshop-intro-day-1.html): welcome, schedule, team and code of conduct
+2. [Unix](unix-shell-introduction.html): Unix shell introduction
+3. [Git intro](git-intro-lesson.html): version control with Git
+4. [Git remotes](git-remotes-intro-lesson.html): Git remotes and GitHub
 
 Click a slide deck to open it. Inside a deck, press `F` for fullscreen, `S` for speaker view and `O` for the slide overview.
