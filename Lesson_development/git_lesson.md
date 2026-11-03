@@ -200,7 +200,7 @@ Add files to track the folder:
 
 ```bash
 touch treatments/aspirin.txt treatments/advil.txt
-git add treatments/
+git add treatments/aspirin.txt treatments/advil.txt # I also can add the whole folder 
 git commit -m "add some treatments for patients"
 ls -R
 ```
@@ -246,40 +246,7 @@ git status --ignored
 
 > Instructor Note: Use breakout groups. Let participants try each step, then show the solution. Each task: 1–2 minutes.
 
-Assignment:
-
-**Create new repository and use the modify-add-commit cycle.**
-- Create and initialize a repository called ‘my-repo’
-- Create a file ‘research.txt’ with the sentence “Science is awesome”.
-- Add and commit the changes. Remember to use a meaningful message.
-- Change sentence in ‘research.txt’ to “Science is messy”
-Add and commit.
-- Create a folder called “raw-data”
-- Ignore the raw-data folder and commit it 
-- ( bonus) Check your history log – you should have 3 commits. 
-
-
-Steps:
-
-```bash
-mkdir my-repo && cd my-repo
-git init
-nano research.txt  # Add "Science is awesome"
-git add research.txt
-git commit -m "add awesome science"
-
-nano research.txt  # Change to "Science is messy"
-git add research.txt
-git commit -m "change to messy science"
-
-mkdir raw-data
-touch .gitignore
-nano .gitignore  # Add: raw-data/
-git add .gitignore
-git commit -m "ignore raw data folder"
-
-git log --oneline --graph
-```
+- Go to the Challenge at Lesson_development/Material_for_participants/exercises.md, and try to do as many as they can in all the parts.
 
 ---
 
@@ -320,8 +287,9 @@ nano calculate_mean.py
 ```bash
 git diff HEAD calculate_mean.py
 # or previous versions:
-git diff HEAD~1 calculate_mean.py
+git diff HEAD~1 calculate_mean.py # compares the file's current working-tree version with the version from the previous commit.
 git diff HEAD~3 calculate_mean.py
+git diff HEAD~1 HEAD -- calculate_mean.py # compare two committed versions
 ```
 
 ### e. Use Specific Commit IDs
@@ -350,24 +318,56 @@ git add calculate_mean.py
 git commit -m "add usage"
 ```
 
-Revert to last commit:
+### Introduce an unwanted change
 
 ```bash
-git restore calculate_mean.py
-cat calculate_mean.py
+echo "# Incorrect assumption" >> calculate_mean.py
 ```
 
-Revert to specific commit:
+### Examine the change
 
 ```bash
-git log --oneline
-git restore -s <commit-id> calculate_mean.py
+git status
+git diff
 ```
 
-Restore the file to the state of the last commit:
+### Discard the unstaged change
+
 
 ```bash
-git restore calculate_mean.py
+git restore calculate_mean.py # Discards unstaged changes, restoring the file from the staging area.
+```
+
+### Verify the recovery
+
+```bash
+git status
+```
+
+### Find commits that changed this file
+
+```bash
+git log --oneline -- analysis.py
+```
+
+### Restore from a selected older commit
+
+```bash
+git restore --source=<older-commit-hash> -- calculate_mean.py # replace the content of calculate_mean.py with the content of that commit 
+```
+
+### Inspect the restored version
+
+```bash
+git diff
+```
+
+- Git allows us to recover earlier versions of files without losing the history of the project.
+
+### Restore the file to the state of the last commit:
+
+```bash
+git restore --source=HEAD -- calculate_mean.py
 git add calculate_mean.py
 git commit -m "usage message added"
 ```
