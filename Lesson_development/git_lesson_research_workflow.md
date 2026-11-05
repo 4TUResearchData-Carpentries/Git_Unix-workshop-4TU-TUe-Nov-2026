@@ -366,7 +366,7 @@ Check whether Git recognizes the ignore rule:
 ```bash
 git status
 git status --ignored
-git check-ignore -v raw-data/temperature_readings.csv
+git check-ignore -v raw-data/temperature_readings.csv # Check whether the CSV file is ignored by Git.
 ```
 
 Stage and commit the ignore configuration:
@@ -379,27 +379,12 @@ git status
 
 > Instructor Note: `.gitignore` does not delete local files, does not retroactively untrack previously committed files, and does not make a public repository safe for sensitive data already committed. Avoid promising that ignored data will accompany the code when the repository is cloned.
 
-### 🧪 Independent Hands-On Exercise [25–30 min]
 
-Learners work through the companion file **`git_research_workflow_exercises.md`**. This is a *new* fictional mini-study repository, so they apply the same skills without merely repeating the instructor's exact commands.
+## Hands-On Exercise: Modify, Add, Commit \[20 min]
 
-The exercise asks participants to:
 
-1. Initialize a repository and stage two project files before one initial commit.
-2. Modify both files, stage them selectively, and compare staged vs unstaged changes.
-3. Explore untracked data and configure `.gitignore`.
-4. Inspect the three-commit history and identify changes per commit.
-5. Restore an earlier script version safely, then return to `HEAD`.
+- Go to the Challenge at Lesson_development/Material_for_participants/git_research_workflow_exercises.md PART 1-3. 
 
-**Debrief questions:** What did `git status` tell you that `git diff` did not? How did you verify both files were included in a commit? Which changes would you keep out of version control, and why?
-
-> Instructor Note: Keep the original approach of learners attempting tasks in small groups and discussing solutions. The companion challenge includes optional collapsible hints below each part. Return to the original `field-study` directory after the exercise:
->
-> ```bash
-> cd ~/Desktop/field-study
-> ```
-
----
 
 ## 🔍 Day 1 — Part 2: Exploring Git History [18 min]
 
@@ -517,6 +502,12 @@ git show <commit-hash> -- calculate_mean.py
 
 ---
 
+### Exercise (5 mins)
+
+Go back to your `mini-field-study` folder and continue with exercises(Lesson_development/Material_for_participants/git_research_workflow_exercises.md) Part 4. 
+
+
+
 ## ⏪ Restoring Changes and Earlier Versions [12 min]
 
 > Instructor Note: This segment deliberately separates (1) discarding an unwanted unstaged change and (2) retrieving an older committed version. Explain the consequences of overwriting uncommitted work before demonstrating `git restore`.
@@ -580,16 +571,24 @@ Mean water temperature: 18.25 C
 
 **Wrap-up reflection:** How would recording code, methodological decisions, and the motivation for a correction help someone reproduce the analysis six months later?
 
----
+### Exercise
+
+Go back to your `mini-field-study` folder and continue with exercises (Lesson_development/Material_for_participants/git_research_workflow_exercises.md) Part 5. 
 
 ✅ **End of Day 1.** Keep the `field-study` repository: it becomes the local repository connected to GitHub on Day 2.
 
+## Add your feedback in the collaborative document 
+
+- +1 one thing you like/keep it 
+- -1 one thing you want to improve
 ---
 
 ## 🛰️ Day 2: Working with Remotes and Collaborating on GitHub
+
 ### 🧭  — Recap of local Git
 ### 🧭  — Intro to Remotes
 ### 🧭  — Push/Pull
+
 > **Instructor Note:** Introduce the idea of remote repositories using slides. Explain what GitHub is, how it connects to local repositories, and why remotes are important for collaboration and backup.
 
 ---
@@ -741,7 +740,8 @@ git push origin main
 > **Note:** This requires that participants have been added as **collaborators**.
 
 ---
-### 🪄 Optional: Branches and Pull Requests (if time allows)
+### 🪄Branches and Pull Requests 
+
 Create and switch to a new branch:
 
 ```bash
@@ -764,49 +764,83 @@ git push origin <your-branch-name>
 
 **demo before assignment**
 
-1. Owner writes an issue about something is not working in the code.
+### Instructor demonstration: One issue, one proposed solution, one review
 
-2. Collaborator forks , clone , make a new branch, solve the issue and push it to the fork and create a PR.
+**1. Owner: describe a problem using a GitHub issue**
 
-3. Owner sees the peer and tries it locally before it can be merged.
+In your `field-study` repository, open **Issues → New issue**.
 
-   `git fetch origin pull/123/head:pr-123` 123 is the name of the PR
+**Example title:** `Add a README so new researchers can reproduce the analysis`
 
-   `git checkout pr-123`
+**Example description:**
 
-4. Owner goes to the website and merge the PR to main.
+> A new team member cannot tell what this repository contains or how to run the Python analysis. Add a `README.md` containing the research question, a description of the files, instructions for running `calculate_mean.py`, the expected result, and notes about data provenance. Link to `methods.md` for methodological details.
+>
 
-- explain visually what happens.
+
+**2. Collaborator: fork, clone, and create a branch**
+
+Fork the owner's repository on GitHub. Then, from outside any existing `field-study` repository:
+
+```bash
+cd ~/Desktop
+git clone https://github.com/<collaborator-username>/field-study.git field-study-contribution
+cd field-study-contribution
+git switch -c improve-readme
+```
+
+Make the requested change:
+
+```bash
+nano README.md
+git status
+git add README.md
+git diff --staged
+git commit -m "Document how to reproduce the field study"
+git push -u origin improve-readme
+```
+
+**3. Collaborator: open a pull request**
+
+On GitHub, open a PR with:
+
+- **Base repository:** the owner's `field-study`; **base branch:** `main`.
+- **Head repository:** the collaborator's fork; **compare branch:** `improve-readme`.
+- **PR description:** Explain what changed, why, and how it was checked. Link the issue (for example, `Closes #12`, replacing `12` with the real issue number).
+
+**4. Owner: review before merging**
+
+On GitHub, open the PR's **Files changed** tab. Look for missing instructions, confusing claims about the source data, or undocumented assumptions. Leave a comment or approve the PR.
+
+**Optional — test the collaborator's branch locally using commands from this course:**
+
+```bash
+cd ~/Desktop
+git clone --branch improve-readme \
+  https://github.com/<collaborator-username>/field-study.git \
+  field-study-review
+cd field-study-review
+git log -1 --name-only
+python calculate_mean.py
+```
+
+Here, `--branch improve-readme` selects the proposed branch from the collaborator's **fork**. The clone goes into a separate `field-study-review` directory, so it does not overwrite the owner's local project. For a README-only PR, verify that the documented command and output are correct.
+
+**5. Owner: merge, then synchronize the original local repository**
+
+After review, merge the PR in GitHub. Then return to your **original** local project:
+
+```bash
+cd ~/Desktop/field-study
+git pull origin main
+git log --oneline
+git status
+```
+
 
 **Assignment:**
 
-1. Write an Issue in your `field-study` repo. Options:
-
-   * Add a multiplication function
-
-   * Improve `calculate_mean` with full documentation
-
-   * Create a `README.md` file
-
-2. Pair up:
-
-   * Clone or fork each other’s repositories. 
-
-   * Create a branch, solve the issue.
-
-   * Open a Pull Request with your changes.
-
-3. Review and integrate PRs if possible.
-
-4. Reflect:
-
-   * What worked well?
-
-   * What was confusing?
-
-   * Did you encounter merge conflicts?
-
-   * How would you improve the process next time?
+ Go to Lesson_development/Material_for_participants/field_study_issues_pull_requests_exercise.md
 
 ---
 ### 🪪 12. Licensing & Citation [Optional, 5 min]
