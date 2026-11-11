@@ -58,6 +58,12 @@ title: Welcome to the Unix & Git workshop
 <small>Research Data Manager at Utrecht University Library</small>
 :::
 
+::: {.column width="30%"}
+![Neha Moopen](images/workshop-intro-day-1/Martijn-Klabbers.webp){width="55%"}
+
+
+<small> Manager at ICT, Education Innovator at Department of Mathematics and Computer Science, TU/e</small>
+:::
 
 :::
 
@@ -73,9 +79,6 @@ title: Welcome to the Unix & Git workshop
 ![Pie chart of workshop participant faculties](images/workshop-intro-day-1/slide-05-faculty-chart.svg){width=75%}
 
 
-::: {.notes}
-Original PowerPoint chart values: Built Environment: 0.6364, Biomedical Engineering: 0.0909, Applied Mathematics: 0.0909, Unknown: 0.0909. The displayed SVG normalizes them to 100%.
-:::
 
 
 ## Code of Conduct

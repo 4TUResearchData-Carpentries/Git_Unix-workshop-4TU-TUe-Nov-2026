@@ -5,21 +5,13 @@ title: Introduction to Version Control with Git
 <!-- Converted from Git-intro-lesson.pptx; 1 slide per original PPTX slide.
      Images are stored under ./images/git-intro-lesson/. -->
 
-## Version control with Git
+# Version control with Git
 
 <!-- Source slide 1 -->
 
-::: {.columns}
-::: {.column width="42%"}
-**Version control with Git**
 
-Understanding how changes accumulate, and how to collaborate without creating endless copies of files.
-:::
+![We've all been Dino at some point. Lets aim for something better!](images/git-intro-lesson/slide-01-01-70765e1f39.png){width="83%"}
 
-::: {.column width="58%"}
-![Git comic about versioned filenames](images/git-intro-lesson/slide-01-01-70765e1f39.png){width="83%"}
-:::
-:::
 
 
 ## Overview
@@ -31,353 +23,102 @@ Understanding how changes accumulate, and how to collaborate without creating en
 - How to use Git
 
 
-## Why Git?
-
-<!-- Source slide 3 -->
-
-::: {.pill .p-orange}
-Or any other version control software
-:::
+## Why Git, or any other version control software?
 
 
-## Situation #1: Reviewing a draft document (offline)
+::: {.fragment}
 
-<!-- Source slide 4 -->
+**Reviewing a draft document (offline)**
+
 
 ::: {.columns}
-::: {.column width="47%"}
-![PHD Comics illustration of endlessly revised final documents](images/git-intro-lesson/slide-04-01-e20ee9f1ab.png){width="64%"}
+::: {.column width="50%"}
+![](images/git-intro-lesson/slide-04-01-e20ee9f1ab.png){width="64%"}
 :::
 
-::: {.column width="53%"}
-![Screenshot of many versions of the same document](images/git-intro-lesson/slide-04-02-5b4b1d78c7.gif){width="88%"}
+::: {.column width="50%"}
+![File system structure](images/git-intro-lesson/slide-04-02-5b4b1d78c7.gif){width="88%"}
+
+
+
+:::
+:::
 
 - Difficult to know which copy contains which change
 - Repeated copies of the same information consume storage
+
 :::
-:::
+
+## Why Git, or any other version control software?
+
+**A group coding project**
+
+In research and software projects, many people may work on the same files: scripts, data notes, reports, documentation.
 
 
-## Situation #2: A group coding project
-
-<!-- Source slide 5 -->
 
 ::: {.columns}
 ::: {.column width="33%"}
-::: {.pill .p-orange}
-Project copy #1
-:::
 
 ![Alice](images/git-intro-lesson/slide-05-01-bb5a1ef5ea.png){width="40%"}
 
-**Alice**
 :::
 
 ::: {.column width="33%"}
-::: {.pill .p-grey}
-Project copy #2
-:::
+
 
 ![Laura](images/git-intro-lesson/slide-05-02-c1c46fe862.jpg){width="40%"}
 
-**Laura**
 :::
 
 ::: {.column width="33%"}
-::: {.pill .p-red}
-Project copy #3
+
+
+![](images/git-intro-lesson/slide-05-03-8ec2483c8b.png){width="40%"}
+
 :::
-
-![John](images/git-intro-lesson/slide-05-03-8ec2483c8b.png){width="40%"}
-
-**John**
-:::
-:::
-
-::: {.notes}
-Here talk about the challenges when working a group project of code for example without using version control
-:::
-
-
-## Situation #2: A group coding project
-
-<!-- Source slide 6 -->
-
-::: {.columns}
-::: {.column width="33%"}
-::: {.pill .p-orange}
-Project copy #1
-:::
-
-![Alice](images/git-intro-lesson/slide-05-01-bb5a1ef5ea.png){width="40%"}
-
-**Alice**
-:::
-
-::: {.column width="33%"}
-::: {.pill .p-grey}
-Project copy #2
-:::
-
-![Laura](images/git-intro-lesson/slide-05-02-c1c46fe862.jpg){width="40%"}
-
-**Laura**
-:::
-
-::: {.column width="33%"}
-::: {.pill .p-red}
-Project copy #3
-:::
-
-![John](images/git-intro-lesson/slide-05-03-8ec2483c8b.png){width="40%"}
-
-**John**
-:::
-:::
-
-::: {.note-box}
-**Challenge:** How to merge all these different copies together and maintain a final copy of the project?
-:::
-
-::: {.notes}
-Here talk about the challenges when working a group project of code for example without using version control
-:::
-
-
-## Situation #2: A group coding project
-
-<!-- Source slide 7 -->
-
-::: {.columns}
-::: {.column width="33%"}
-::: {.pill .p-orange}
-Project copy #1
-:::
-
-![Alice](images/git-intro-lesson/slide-05-01-bb5a1ef5ea.png){width="40%"}
-
-**Alice**
-:::
-
-::: {.column width="33%"}
-::: {.pill .p-grey}
-Project copy #2
-:::
-
-![Laura](images/git-intro-lesson/slide-05-02-c1c46fe862.jpg){width="40%"}
-
-**Laura**
-:::
-
-::: {.column width="33%"}
-::: {.pill .p-red}
-Project copy #3
-:::
-
-![John](images/git-intro-lesson/slide-05-03-8ec2483c8b.png){width="40%"}
-
-**John**
-:::
-:::
-
-::: {.note-box}
-**Challenge:** How to merge all these different copies together and maintain a final copy of the project?
-:::
-
-
-
-::: {.pill .p-orange}
-John makes his changes and sends his project to Laura
-:::
-
-::: {.notes}
-Here talk about the challenges when working a group project of code for example without using version control
-:::
-
-
-## Situation #2: A group coding project
-
-<!-- Source slide 8 -->
-
-::: {.columns}
-::: {.column width="33%"}
-::: {.pill .p-orange}
-Project copy #1
-:::
-
-![Alice](images/git-intro-lesson/slide-05-01-bb5a1ef5ea.png){width="40%"}
-
-**Alice**
-:::
-
-::: {.column width="33%"}
-::: {.pill .p-grey}
-Project copy #2
-:::
-
-![Laura](images/git-intro-lesson/slide-05-02-c1c46fe862.jpg){width="40%"}
-
-**Laura**
-:::
-
-::: {.column width="33%"}
-::: {.pill .p-red}
-Project copy #3
-:::
-
-![John](images/git-intro-lesson/slide-05-03-8ec2483c8b.png){width="40%"}
-
-**John**
-:::
-:::
-
-::: {.note-box}
-**Challenge:** How to merge all these different copies together and maintain a final copy of the project?
-:::
-
-
-
-::: {.pill .p-orange}
-John makes his changes and sends his project to Laura
 :::
 
 ::: {.pill .p-orange}
-Laura merges her changes and sends it to Alice
+
+Each of them have the same copy of the code base of the project, but they are working on different parts of it.
+
 :::
 
-::: {.notes}
-Here talk about the challenges when working a group project of code for example without using version control
+## A group coding project : *Challenges*
+
+
+
+ - How to merge all these different copies together and maintain a final copy of the project?
+ - What changed between two versions of the same analysis?
+ - Which merge did work and which one did not?
+ - Who changed what and when? 
+
+
+
+
+::: {.fragment}
+
+![](images/git-intro-lesson/slide-14-01-bf61659951.png){width="80%"}
+
 :::
 
-
-## Situation #2: A group coding project
-
-<!-- Source slide 9 -->
-
-::: {.columns}
-::: {.column width="33%"}
-::: {.pill .p-orange}
-Project copy #1
-:::
-
-![Alice](images/git-intro-lesson/slide-05-01-bb5a1ef5ea.png){width="40%"}
-
-**Alice**
-:::
-
-::: {.column width="33%"}
-::: {.pill .p-grey}
-Project copy #2
-:::
-
-![Laura](images/git-intro-lesson/slide-05-02-c1c46fe862.jpg){width="40%"}
-
-**Laura**
-:::
-
-::: {.column width="33%"}
-::: {.pill .p-red}
-Project copy #3
-:::
-
-![John](images/git-intro-lesson/slide-05-03-8ec2483c8b.png){width="40%"}
-
-**John**
-:::
-:::
-
-::: {.note-box}
-**Challenge:** How to merge all these different copies together and maintain a final copy of the project?
-:::
-
-
-
-::: {.pill .p-orange}
-John makes his changes and sends his project to Laura
-:::
-
-::: {.pill .p-orange}
-Laura merges her changes and sends it to Alice
-:::
-
-::: {.pill .p-orange}
-Alice merges her changes, reviews, and maintains the final copy
-:::
-
-::: {.notes}
-Here talk about the challenges when working a group project of code for example without using version control
-:::
-
-
-## Situation #2: Consequences of this solution
-
-<!-- Source slide 10 -->
-
-- Manual approach
-- Time consuming
-- Error prone
-- Not scalable
-- Inefficient
-
-
-## Situation #2: Consequences of this solution
-
-<!-- Source slide 11 -->
-
-- Manual approach
-- Time consuming
-- Error prone
-- Not scalable
-- Inefficient
-
-::: {.box}
-We need an efficient system that tracks different versions of a project, allowing the team to know who made changes, when, and why.
-:::
 
 
 ## What is Git?
 
-<!-- Source slide 12 -->
+:::{.incremental}
 
-### Mentimeter
-
-[https://www.menti.com/alx2mugaqr1n](https://www.menti.com/alx2mugaqr1n)
-
-
-## What is Git? — Menti Poll
-
-<!-- Source slide 13 (hidden in original PowerPoint) -->
-
-::: {.columns}
-::: {.column width="50%"}
-![Menti Poll screenshot](images/git-intro-lesson/slide-13-01-5f139a1ce3.png){width="75%"}
-:::
-
-::: {.column width="50%"}
-What do you already know about Git?
-:::
-:::
-
-::: {.notes}
-Originally hidden in PowerPoint.
+- It was created in 2005 by Linux Torvalds , the same creator of Linux OS.
+- Git is **free**, **open source**, **distributed**, **fast** and designed to **scale** to very large projects. Those were explicit design goals from the beginning. 
+- Git is version-control software: it records the history of a project and makes it possible to compare, share and combine changes.
+- Git is the most dominant version-control system used in software development today. 
+- Git was originally built to manage Linux development, but today it is used for: software,research code, data analysis,websites,documentation,books and much more. 
+- Was Git originally designed to make version control easy for beginners? 
+     - No. It was designed to solve the collaboration problems of one of the world's largest software projects (the development of Linux).
 :::
 
 
-## What is Git?
-
-<!-- Source slide 14 (hidden in original PowerPoint) -->
-
-![Git visual](images/git-intro-lesson/slide-14-01-bf61659951.png){width="40%"}
-
-- Git is the most used version control system. More than 90% of software projects around the world use Git.
-- It was created in 2005 by Linus Torvalds, the same creator of Linux.
-- It is free, open source, fast, and scalable.
-
-<small>These claims are carried over from the original slides and have not been independently fact-checked.</small>
-
-::: {.notes}
-Originally hidden in PowerPoint.
-:::
 
 
 ## How to use Git?
@@ -399,56 +140,123 @@ The workshop of today!
 - GitHub account
 
 
-## Schedule
-
-<!-- Source slide 17 (hidden in original PowerPoint) -->
-
-| Time | Session |
-|:--|:--|
-| 09:30–09:45 | Git intro |
-| 09:45–11:30 | Setting up a local Git repository |
-| 14:30–14:45 | Break |
-| 14:45–15:45 | Git cycle and ignoring things |
-| 15:30–15:45 | Exercise |
-| 15:45–16:00 | Break |
-| 16:00–17:00 | Exploring history and concluding remarks |
-
-::: {.notes}
-Originally hidden in PowerPoint. Schedule overlaps are retained from the source and should be reviewed before reuse.
-:::
-
 
 ## By the end of this lesson, we expect to:
 
 <!-- Source slide 18 -->
 
-::: {.columns}
-::: {.column width="64%"}
+
 - Create a local Git repository
 - Manage the history of changes to a file
 - Understand Git terminology
 - Set up a remote project
 - Collaborate with other peers
-:::
-
-::: {.column width="36%"}
-![Cartoon researcher using a laptop](images/git-intro-lesson/slide-18-01-fc95f6d9a9.png){width="80%"}
-:::
-:::
 
 
-## Let’s start the lesson
-
-<!-- Source slide 19 -->
-
-![Let’s start the lesson graphic](images/git-intro-lesson/slide-19-01-63a0fbeafb.jpg){width="65%"}
 
 
-## The working directory, staging area and Git history
 
-<!-- Source slide 20 -->
+## Let’s start {.spacious-slide}
 
-![Diagram of working directory staging area and Git history](images/git-intro-lesson/slide-20-01-ab8b000916.png){width="93%"}
+
+
+## The three areas of Git
+
+
+::::: {.columns }
+
+:::: {.column width="20%"}
+
+### Working directory
+
+Where you **edit files** and experiment freely.
+
+::::
+
+:::: {.column width="10%" }
+`git add`
+
+→
+::::
+
+:::: {.column width="20%"}
+
+### Staging area
+
+Where you **select changes** for the next snapshot.
+
+::::
+
+:::: {.column width="10%" .git-transition}
+`git commit`
+
+→
+::::
+
+:::: {.column width="20%"}
+
+### Git history
+
+Where Git **records snapshots** you can revisit and compare.
+
+::::
+
+:::::
+
+
+
+## Git is like taking a photograph!
+
+A **commit** is like taking a snapshot of your project.
+
+::::: {.columns }
+
+:::: {.column width="25%"}
+
+### 🧩 Prepare the scene
+
+**Working directory**
+
+Arrange, change, and experiment with the objects.
+
+::::
+
+:::: {.column width="10%" }
+`git add`
+
+→
+::::
+
+:::: {.column width="25%"}
+
+### 🖼️ Frame the picture
+
+**Staging area**
+
+Choose which elements/objects will appear in the picture.
+
+::::
+
+:::: {.column width="10%" }
+`git commit`
+
+→
+::::
+
+:::: {.column width="25%"}
+
+### 📸 Take the picture!
+
+**Git history**
+
+Save the snapshot in your photo album.
+
+::::
+
+:::::
+
+
+
 
 
 ## Tracked, staged and untracked files
