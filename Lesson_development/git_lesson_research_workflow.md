@@ -818,8 +818,8 @@ python calculate_mean.py
 **Expected result:** Mean water temperature:18.25 C
 
 See methods.md for further methodological details.
+``
 
-```
 
 ```bash
 git status
@@ -827,6 +827,7 @@ git add README.md
 git diff --staged
 git commit -m "Document how to reproduce the field study"
 git push -u origin improve-readme
+
 ``` 
 
 **3. Collaborator: open a pull request**
