@@ -1,12 +1,11 @@
-# 🧪 Git Challenge: A Mini Research Project
+# Git Challenge: A Mini Research Project
 
 **Suggested time:** 25–30 minutes (plus optional bonus)  
-**Level:** Beginner  
 **Goal:** Build a small research project and explain what is **modified**, **staged**, and **committed**.
 
-> **Scenario:** You are investigating rainfall in a fictional city. Your colleague asks whether the result has changed since the last analysis. You need a clear record of the code, methods, and research decisions. Try solving each part before opening its hints.
->
-> **Important:** This is an **independent practice repository**. First navigate outside your instructor's `field-study` repository and create a new repository called `mini-field-study`.
+You are investigating rainfall in a city. Your colleague asks whether the result has changed since the last analysis. You need a clear record of the code, methods, and research decisions. Try solving each part before opening its hints.
+
+**Important:** This is an **independent practice repository**. First navigate outside your instructor's `field-study` repository and create a new repository called `mini-field-study`.
 
 ## Part 1 — Create your research project
 
@@ -56,7 +55,7 @@ You discover that the last measurement was recorded incorrectly: it should have 
 7. Stage `methods.md`, review everything staged, and create **one commit** for the correction.
 8. Run the script again. Did the calculated mean change?
 
-**Checkpoint:** Explain why two modified files can belong to just one commit.
+
 
 <details>
 <summary>🔍 Click here for hints!</summary>
@@ -92,9 +91,8 @@ A new folder will contain original raw observations that you will store somewher
 6. Check that Git recognizes the ignore rule.
 7. Commit **only the `.gitignore` file**.
 
-**Checkpoint:** Is your CSV still on your computer? Will it be included in a fresh clone of the repository?
 
-> **Research reflection:** Ignoring raw data is a choice for this fictional exercise, not a universal best practice. Small, non-sensitive datasets are often appropriate to version-control. Sensitive or large datasets may need controlled storage and clear documentation of how to access them.
+**Research reflection:** Ignoring raw data is a choice for this exercise, not a universal best practice. Small, non-sensitive datasets are often appropriate to version-control. Sensitive or large datasets may need controlled storage and clear documentation of how to access them.
 
 <details>
 <summary>🔍 Click here for hints!</summary>
@@ -164,28 +162,7 @@ You want to understand the analysis **before** the rainfall correction, but you 
 
 </details>
 
-## ⭐ Bonus — Can Git record an empty folder?
 
-Your project needs a future `figures/` directory, even though no figures exist yet.
 
-- Create `figures/` and inspect `git status`.
-- Try to make Git record this directory.
-- Investigate how a placeholder file named `.gitkeep` could help.
-- Commit your proposed solution and examine the resulting history.
-
-<details>
-<summary>🔍 Click here for hints!</summary>
-
-- Use `mkdir figures` and `git status`.
-- Git tracks files, not empty directories.
-- Use `touch figures/.gitkeep` to create a placeholder file.
-- `.gitkeep` is an ordinary filename convention, not a special Git mechanism.
-- Stage the placeholder with `git add figures/.gitkeep` and commit it.
-
-</details>
-
----
-
-**Exit ticket (2 minutes):** In your own words, what are the three differences between a *modified file*, a *staged file*, and a *committed version*? Which Git command would you use to inspect each?
 
 Adapted from the [Software Carpentry Git lesson](https://swcarpentry.github.io/git-novice/), using a new fictional research scenario and original challenges.

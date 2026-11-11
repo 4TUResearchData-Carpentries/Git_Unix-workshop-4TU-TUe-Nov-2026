@@ -2,7 +2,7 @@
 
 ## Workshop narrative
 
-**Scenario: The mystery of the unexpected water-temperature measurement.** A fictional research team is studying water temperatures at a field site. One temperature is suspiciously high. As the team checks its field notes, it updates its Python script and methodology, records the reasoning for a correction, and ensures that large or restricted raw datasets are not committed accidentally.
+**Scenario:** A fictional research team is studying water temperatures at a field site. One temperature is suspiciously high. As the team checks its field notes, it updates its Python script and methodology, records the reasoning for a correction, and ensures that large or restricted raw datasets are not committed accidentally.
 
 The recurring teaching questions are:
 
@@ -64,7 +64,6 @@ tail -f ~/.bash_history
 For the lesson and the unchanged Day 2 commands, the examples assume `~/Desktop`. Before starting, ensure this directory exists:
 
 ```bash
-mkdir -p ~/Desktop
 cd ~/Desktop
 pwd
 ```
@@ -77,7 +76,6 @@ To simplify the displayed prompt (optional):
 export PS1='$ '
 ```
 
-Optional window-mirroring software: [OnTopReplica](https://github.com/LorenzCK/OnTopReplica).
 
 **Before learners arrive:** Check that Git works and that `python` refers to Python 3. Depending on the machine, the executable may be `python3` instead. This example uses only the Python standard library: **NumPy is not required**.
 
@@ -93,13 +91,12 @@ Optional window-mirroring software: [OnTopReplica](https://github.com/LorenzCK/O
 
 ### 🧊 Introduction [10 min]
 
-- Start with [HackMD collaborative notes](https://edu.nl/xhydh) and an icebreaker.
-- Transition to Git with the [introductory slides](https://zenodo.org/records/19603828).
-- Use the existing [Mentimeter poll](https://www.menti.com/alx2mugaqr1n) in presenter mode.
 
 **Opening question:** You ran an analysis two months ago and got a different result. How would you determine which code and assumptions produced each result?
 
+
 > Instructor Note: Present Git as a way to document the evolution of research, not merely as a backup or a software-development requirement. Keep the fictional field-study story visible throughout the demonstrations.
+
 
 ### 🔧 Step 1: Setting Up Git [6 min]
 
@@ -123,6 +120,7 @@ Configure Git identity (usually needed only once per computer):
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your@email.com"
+git config --global init.defaultBranch main 
 ```
 
 Check the configuration:
@@ -166,7 +164,7 @@ git status
 
 **Ask:** Why can we see `.git` with `ls -a`, but not with ordinary `ls`?
 
-> Instructor Note: Explain that `.git` holds the repository's metadata and history. For this exercise, create the repository **outside** any other Git repository; nested repositories are possible but unnecessarily confusing here.
+> Instructor Note: Explain that `.git` holds the repository's metadata and history. 
 
 ### 📝 Step 3: Tracking Your First Change [10 min]
 
@@ -181,7 +179,7 @@ nano calculate_mean.py
 Add this Python code:
 
 ```python
-# Fictional field observations for the Git workshop (degrees Celsius).
+# Water-temperature readings (Celsius).
 measurements = [16.0, 18.0, 19.0, 30.0]
 
 
@@ -189,7 +187,7 @@ def calculate_mean(values):
     return sum(values) / len(values)
 
 
-print(f"Mean water temperature: {calculate_mean(measurements):.2f} C") # :.2f Formats the result as a floating-point number with exactly two decimal places.
+print(f"Mean water temperature: {calculate_mean(measurements)} C") 
 ```
 
 > Instructor Note: The exercise is about Git, not learning NumPy or Python syntax. The script is small, executable, and self-contained. The later suspicious `30.0` reading will create a reason to inspect and correct history.
@@ -220,15 +218,16 @@ git commit -m "Add initial water temperature analysis"
 git status
 ```
 
-> Instructor Note: Draw the **working directory → staging area → local repository** model. Clarify that `git add` prepares a snapshot; `git commit` records the staged snapshot. A clean status is not a substitute for inspecting which files were included.
-
+> Instructor Note: Draw the **working directory → staging area → local repository** model. Clarify that `git add` prepares a snapshot; `git commit` records the staged snapshot. 
 **Checkpoint:**
 
+
 ```bash
-git log -1 --name-only
+git log # Displays the commit history without showing the files that has been modified
+git log --name-only # Lists the files changed in that commit, without showing their contents
+git log --stat # Summary of file changes
 ```
 
-**Ask:** Why is a descriptive commit message more useful than `update` or `changes`?
 
 ### 🛠️ Step 4: Two Files, One Research Decision, One Commit [12 min]
 
@@ -259,17 +258,16 @@ Content for `methods.md`:
 ```markdown
 # Water temperature field study
 
-- All measurements are fictional and expressed in degrees Celsius.
-- For this teaching example, measurements are included in `calculate_mean.py`.
-- We calculate the arithmetic mean of four readings.
+- All measurements are expressed in degrees Celsius.
+- We calculate the arithmetic mean of four readings using `calculate_mean.py`.
 - The reading of 30.0 C is unexpectedly high and must be checked against field notes.
 ```
 
 Check the state of the repository:
 
 ```bash
-git status
-git diff
+git diff # it shows changes that are not staged yet
+git status # Note that methods.md is not yet tracked that is why git diff does not show it 
 ```
 
 > Instructor Note: `git diff` shows the unstaged change in `calculate_mean.py`, but does **not** display the content of the new untracked `methods.md`. Use `git status` to spot that untracked file.
@@ -279,8 +277,8 @@ Stage **only** the script:
 ```bash
 git add calculate_mean.py
 git status
-git diff
-git diff --staged
+git diff # it should give no answer since the changes are staged
+git diff --staged # it shows the changes that are staged ready to be commited 
 ```
 
 **Prediction:** If we commit now, does `methods.md` get included? Why not?
@@ -290,14 +288,17 @@ Stage the second file, inspect the planned commit, then commit once:
 ```bash
 git add methods.md
 git status
-git diff --staged --stat
+git diff --staged # what have changed in all staged files 
+git diff --staged --stat # summary of the differences in all commited files 
 git commit -m "Document the analysis method and suspicious reading"
 ```
 
 Verify that **both files** belong to the one commit:
 
 ```bash
+git log --name-only
 git log -1 --name-only
+git log -1 --stat
 ```
 
 **Key point:** You can stage as many related files as necessary before creating one commit. The commit contains the staged versions of those files, not automatically every change in the working directory.
@@ -317,7 +318,7 @@ git status
 
 > Instructor Note: Git tracks file paths and contents, not empty directory objects. Attempting `git add raw-data` at this point does not add an empty folder; with no matching file, Git may report a pathspec error.
 
-Now create a small **fictional** CSV file inside the folder:
+Now create a small CSV file inside the folder:
 
 ```bash
 nano raw-data/temperature_readings.csv
@@ -342,7 +343,7 @@ ls raw-data
 
 ### 🚫 Step 6: Decide What to Ignore [7 min]
 
-**Story:** In this fictional project, the real field datasets may be large or subject to access restrictions, so the team decides to keep those files outside the Git repository. Git will track the analysis code and method documentation, but not local copies of raw datasets.
+**Story:** In this project, the real field datasets may be large or subject to access restrictions, so the team decides to keep those files outside the Git repository. Git will track the analysis code and method documentation, but not local copies of raw datasets.
 
 **Discussion prompt:** Should researchers *always* ignore raw data? **No.** Small, non-sensitive data can be useful in Git. This is a project-specific decision; for data kept elsewhere, document where authorized collaborators can obtain the data and which version supports the analysis.
 
@@ -356,15 +357,13 @@ nano .gitignore
 # Local raw datasets are managed outside this Git repository.
 raw-data/
 
-# Python-generated files
-__pycache__/
-*.pyc
+
 ```
 
 Check whether Git recognizes the ignore rule:
 
 ```bash
-git status
+git status # the raw-data should not appear in the list 
 git status --ignored
 git check-ignore -v raw-data/temperature_readings.csv # Check whether the CSV file is ignored by Git.
 ```
@@ -373,11 +372,12 @@ Stage and commit the ignore configuration:
 
 ```bash
 git add .gitignore
-git commit -m "Ignore local raw data and generated Python files"
+git commit -m "Ignore local raw data"
 git status
+git log --stat # to see a summary of the commits and which files has been modified
 ```
 
-> Instructor Note: `.gitignore` does not delete local files, does not retroactively untrack previously committed files, and does not make a public repository safe for sensitive data already committed. Avoid promising that ignored data will accompany the code when the repository is cloned.
+> Instructor Note: `.gitignore` does not delete local files, does not retroactively untrack previously committed files, and does not make a public repository safe for sensitive data already committed.
 
 
 ## Hands-On Exercise: Modify, Add, Commit \[20 min]
@@ -385,6 +385,7 @@ git status
 
 - Go to the Challenge at Lesson_development/Material_for_participants/git_research_workflow_exercises.md PART 1-3. 
 
+BREAK - 15 mins
 
 ## 🔍 Day 1 — Part 2: Exploring Git History [18 min]
 
@@ -407,8 +408,8 @@ git log -1 --name-only
 
 ```bash
 git log --oneline
-git show --stat HEAD
-git show --stat HEAD~1
+git show --stat HEAD # show what was changed in the HEAD
+git show --stat HEAD~1 # show what was changed in the commit before the last one
 ```
 
 **Ask:** Which commit introduced `methods.md`? Which commit introduced `.gitignore`?
@@ -417,7 +418,7 @@ git show --stat HEAD~1
 
 ### c. The Research Twist: Verify an Unexpected Observation
 
-**Story:** A researcher checks the fictional field notebook and learns that `30.0 C` was a transcription error; the validated reading was `20.0 C`. The team should change both the computational input and the written method explanation, keeping a record of why.
+**Story:** A researcher checks the field notebook and learns that `30.0 C` was a transcription error; the validated reading was `20.0 C`. The team should change both the computational input and the written method explanation, keeping a record of why.
 
 Edit `calculate_mean.py`:
 
@@ -448,7 +449,7 @@ Compare the files with their last committed versions:
 ```bash
 git status
 git diff
-git diff HEAD -- calculate_mean.py
+git diff HEAD -- calculate_mean.py #compare last commited file with current version of the script 
 ```
 
 Run the corrected script:
@@ -474,7 +475,7 @@ git commit -m "Correct temperature transcription error after field-note check"
 
 > Instructor Note: The changing numeric result makes the value of an audit trail tangible. Emphasize that the reason for the change belongs in the commit message and the research documentation, not only in someone's memory.
 
-### d. Compare Committed Versions
+### d. Compare Committed Versions 
 
 ```bash
 git log --oneline
@@ -539,7 +540,7 @@ Recall that the previous commit (`HEAD~1`) still contains the uncorrected `30.0 
 git log --oneline -- calculate_mean.py
 git restore --source=HEAD~1 -- calculate_mean.py
 python calculate_mean.py
-git diff
+git diff # the version now in the working directory is the one from the older commit . The restored file is not automatically  commited
 git log --oneline
 ```
 
@@ -558,7 +559,7 @@ Mean water temperature: 20.75 C
 ```bash
 git restore --source=HEAD -- calculate_mean.py
 python calculate_mean.py
-git status
+git status # the version of the script is restored the last comitted version , so the working tree is clean
 ```
 
 Expected output:
@@ -569,7 +570,6 @@ Mean water temperature: 18.25 C
 
 > Instructor Note: This final restore discards the temporary old-version working-tree contents. **Do not** run `git add` and `git commit` here: restoring the latest version results in no new changes to commit.
 
-**Wrap-up reflection:** How would recording code, methodological decisions, and the motivation for a correction help someone reproduce the analysis six months later?
 
 ### Exercise
 
@@ -703,7 +703,7 @@ Clone it locally:
 
 ```bash
 cd ~/Desktop
-git clone git@github.com:leilaicruz/workshop-checkin.git
+git clone git@github.com:leilaicruz/workshop-checkin.git workshop-checkin  
 ```
 
 > **Instructor Note:** Now contrast cloning vs forking using the table below.
@@ -721,11 +721,11 @@ Create a copy of the template and edit it:
 
 ```bash
 cd workshop-checkin
-cp template.md <first-two-letters-name-last-two-digits-phone>.md
-nano le71.md
+cp template.md <first-last-letters-name-first-two-numbers-postal-code>.md
+nano la26.md
 ```
 
-> Example name: `le71.md`. Add your name, research field and your ideal job an ideal world.
+> Example name: `la26.md`. Add your name, research field and your ideal job an ideal world.
 
 ### c. Collaborative Git Workflow
 A typical workflow:
@@ -770,7 +770,7 @@ git push origin <your-branch-name>
 
 In your `field-study` repository, open **Issues → New issue**.
 
-**Example title:** `Add a README so new researchers can reproduce the analysis`
+**Example title:** `Add a README for reproducibility of the analysis`
 
 **Example description:**
 
@@ -793,12 +793,41 @@ Make the requested change:
 
 ```bash
 nano README.md
+```
+Inside nano writes: 
+
+```markdown
+
+# Water Temperature Field Study
+
+## Research question
+
+What is the average water temperature recorded during our field study?
+
+
+## How to reproduce the analysis
+
+**Requirements:** Python 3 (no external packages needed).
+
+Run the following command from the repository folder:
+
+```bash
+python calculate_mean.py
+```
+
+**Expected result:** Mean water temperature:18.25 C
+
+See methods.md for further methodological details.
+
+```
+
+```bash
 git status
 git add README.md
 git diff --staged
 git commit -m "Document how to reproduce the field study"
 git push -u origin improve-readme
-```
+``` 
 
 **3. Collaborator: open a pull request**
 
@@ -816,19 +845,17 @@ On GitHub, open the PR's **Files changed** tab. Look for missing instructions, c
 
 ```bash
 cd ~/Desktop
-git clone --branch improve-readme \
-  https://github.com/<collaborator-username>/field-study.git \
-  field-study-review
+git clone --branch improve-readme https://github.com/<collaborator-username>/field-study.git  field-study-review
 cd field-study-review
 git log -1 --name-only
-python calculate_mean.py
+cat Readme.md
 ```
 
 Here, `--branch improve-readme` selects the proposed branch from the collaborator's **fork**. The clone goes into a separate `field-study-review` directory, so it does not overwrite the owner's local project. For a README-only PR, verify that the documented command and output are correct.
 
 **5. Owner: merge, then synchronize the original local repository**
 
-After review, merge the PR in GitHub. Then return to your **original** local project:
+After review, merge the PR in GitHub and reply a friendly message to the collaborator. Then return to your **original** local project:
 
 ```bash
 cd ~/Desktop/field-study

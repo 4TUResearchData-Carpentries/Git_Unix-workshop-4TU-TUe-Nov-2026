@@ -13,11 +13,7 @@ Switch roles so both learners experience proposing and reviewing changes. Create
 
 Title of the issue: **Make the project reusable: create `README.md`**
 
-description: Explain the research question, contents, requirements, how to run the analysis, what results to expect, and how the data and methods are documented. Use the starter template below, replacing all placeholders with accurate information. In this lesson, the four fictional measurements are embedded in `calculate_mean.py`; the ignored `raw-data/` file is **not automatically read** by the script.
-
-
-**Success criteria:** Your pair has one clearly scoped issue, a related branch and commit, a PR describing the change, at least one review comment or explicit approval, and (when possible) a merged PR visible in the owner's history.
-
+Description: Explain the research question, contents, requirements, how to run the analysis, what results to expect, and how the data and methods are documented. Use the starter template below, replacing all placeholders with accurate information. In this lesson, the four fictional measurements are embedded in `calculate_mean.py`; the ignored `raw-data/` file is **not automatically read** by the script.
 
 
 ### README starter template
