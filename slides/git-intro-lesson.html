@@ -6,13 +6,13 @@
 <script src="git-intro-lesson_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="git-intro-lesson_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="git-intro-lesson_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="git-intro-lesson_files/libs/quarto-html/quarto-syntax-highlighting-e21500bb30e7ce080c64316834ee3be8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.19">
+<link href="git-intro-lesson_files/libs/quarto-html/quarto-syntax-highlighting-7b1528b1cba7e9f63f59baa7408a6f56.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.11.9">
 
   <title>Introduction to Version Control with Git</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="git-intro-lesson_files/libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="git-intro-lesson_files/libs/revealjs/dist/reveal.css">
   <style>
@@ -34,7 +34,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="git-intro-lesson_files/libs/revealjs/dist/theme/quarto-4672ac1a1a3710580e85bd2d4d7d0910.css">
+  <link rel="stylesheet" href="git-intro-lesson_files/libs/revealjs/dist/theme/quarto-33e4bebf8374c934aa612951da0797a8.css">
   <link rel="stylesheet" href="fonts.css">
   <link href="git-intro-lesson_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="git-intro-lesson_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -144,22 +144,12 @@
 <!-- Converted from Git-intro-lesson.pptx; 1 slide per original PPTX slide.
      Images are stored under ./images/git-intro-lesson/. -->
 </section>
-<section id="version-control-with-git" class="slide level2">
-<h2>Version control with Git</h2>
+<section>
+<section id="version-control-with-git" class="title-slide slide level1 center">
+<h1>Version control with Git</h1>
 <!-- Source slide 1 -->
-<div class="columns">
-<div class="column" style="width:42%;">
-<p><strong>Version control with Git</strong></p>
-<p>Understanding how changes accumulate, and how to collaborate without creating endless copies of files.</p>
-</div><div class="column" style="width:58%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/git-intro-lesson/slide-01-01-70765e1f39.png" style="width:83.0%"></p>
-<figcaption>Git comic about versioned filenames</figcaption>
-</figure>
-</div>
-</div></div>
-</section>
+
+<img data-src="images/git-intro-lesson/slide-01-01-70765e1f39.png" style="width:83.0%" class="r-stretch quarto-figure-center"><p class="caption">We’ve all been Dino at some point. Lets aim for something better!</p></section>
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
 <!-- Source slide 2 -->
@@ -169,409 +159,78 @@
 <li>How to use Git</li>
 </ul>
 </section>
-<section id="why-git" class="slide level2">
-<h2>Why Git?</h2>
-<!-- Source slide 3 -->
-<div class="pill p-orange">
-<p>Or any other version control software</p>
-</div>
-</section>
-<section id="situation-1-reviewing-a-draft-document-offline" class="slide level2">
-<h2>Situation #1: Reviewing a draft document (offline)</h2>
-<!-- Source slide 4 -->
+<section id="why-git-or-any-other-version-control-software" class="slide level2">
+<h2>Why Git, or any other version control software?</h2>
+<div class="fragment">
+<p><strong>Reviewing a draft document (offline)</strong></p>
 <div class="columns">
-<div class="column" style="width:47%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
+<div class="column" style="width:50%;">
 <p><img data-src="images/git-intro-lesson/slide-04-01-e20ee9f1ab.png" style="width:64.0%"></p>
-<figcaption>PHD Comics illustration of endlessly revised final documents</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:53%;">
+</div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/git-intro-lesson/slide-04-02-5b4b1d78c7.gif" style="width:88.0%"></p>
-<figcaption>Screenshot of many versions of the same document</figcaption>
+<figcaption>File system structure</figcaption>
 </figure>
 </div>
+</div></div>
 <ul>
 <li>Difficult to know which copy contains which change</li>
 <li>Repeated copies of the same information consume storage</li>
 </ul>
-</div></div>
+</div>
 </section>
-<section id="situation-2-a-group-coding-project" class="slide level2">
-<h2>Situation #2: A group coding project</h2>
-<!-- Source slide 5 -->
+<section id="why-git-or-any-other-version-control-software-1" class="slide level2">
+<h2>Why Git, or any other version control software?</h2>
+<p><strong>A group coding project</strong></p>
+<p>In research and software projects, many people may work on the same files: scripts, data notes, reports, documentation.</p>
 <div class="columns">
 <div class="column" style="width:33%;">
-<div class="pill p-orange">
-<p>Project copy #1</p>
-</div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/git-intro-lesson/slide-05-01-bb5a1ef5ea.png" style="width:40.0%"></p>
 <figcaption>Alice</figcaption>
 </figure>
 </div>
-<p><strong>Alice</strong></p>
 </div><div class="column" style="width:33%;">
-<div class="pill p-grey">
-<p>Project copy #2</p>
-</div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/git-intro-lesson/slide-05-02-c1c46fe862.jpg" style="width:40.0%"></p>
 <figcaption>Laura</figcaption>
 </figure>
 </div>
-<p><strong>Laura</strong></p>
 </div><div class="column" style="width:33%;">
-<div class="pill p-red">
-<p>Project copy #3</p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
 <p><img data-src="images/git-intro-lesson/slide-05-03-8ec2483c8b.png" style="width:40.0%"></p>
-<figcaption>John</figcaption>
-</figure>
-</div>
-<p><strong>John</strong></p>
 </div></div>
-<aside class="notes">
-<p>Here talk about the challenges when working a group project of code for example without using version control</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<div class="pill p-orange">
+<p>Each of them have the same copy of the code base of the project, but they are working on different parts of it.</p>
+</div>
 </section>
-<section id="situation-2-a-group-coding-project-1" class="slide level2">
-<h2>Situation #2: A group coding project</h2>
-<!-- Source slide 6 -->
-<div class="columns">
-<div class="column" style="width:33%;">
-<div class="pill p-orange">
-<p>Project copy #1</p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/git-intro-lesson/slide-05-01-bb5a1ef5ea.png" style="width:40.0%"></p>
-<figcaption>Alice</figcaption>
-</figure>
-</div>
-<p><strong>Alice</strong></p>
-</div><div class="column" style="width:33%;">
-<div class="pill p-grey">
-<p>Project copy #2</p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/git-intro-lesson/slide-05-02-c1c46fe862.jpg" style="width:40.0%"></p>
-<figcaption>Laura</figcaption>
-</figure>
-</div>
-<p><strong>Laura</strong></p>
-</div><div class="column" style="width:33%;">
-<div class="pill p-red">
-<p>Project copy #3</p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/git-intro-lesson/slide-05-03-8ec2483c8b.png" style="width:40.0%"></p>
-<figcaption>John</figcaption>
-</figure>
-</div>
-<p><strong>John</strong></p>
-</div></div>
-<div class="note-box">
-<p><strong>Challenge:</strong> How to merge all these different copies together and maintain a final copy of the project?</p>
-</div>
-<aside class="notes">
-<p>Here talk about the challenges when working a group project of code for example without using version control</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="situation-2-a-group-coding-project-2" class="slide level2">
-<h2>Situation #2: A group coding project</h2>
-<!-- Source slide 7 -->
-<div class="columns">
-<div class="column" style="width:33%;">
-<div class="pill p-orange">
-<p>Project copy #1</p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/git-intro-lesson/slide-05-01-bb5a1ef5ea.png" style="width:40.0%"></p>
-<figcaption>Alice</figcaption>
-</figure>
-</div>
-<p><strong>Alice</strong></p>
-</div><div class="column" style="width:33%;">
-<div class="pill p-grey">
-<p>Project copy #2</p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/git-intro-lesson/slide-05-02-c1c46fe862.jpg" style="width:40.0%"></p>
-<figcaption>Laura</figcaption>
-</figure>
-</div>
-<p><strong>Laura</strong></p>
-</div><div class="column" style="width:33%;">
-<div class="pill p-red">
-<p>Project copy #3</p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/git-intro-lesson/slide-05-03-8ec2483c8b.png" style="width:40.0%"></p>
-<figcaption>John</figcaption>
-</figure>
-</div>
-<p><strong>John</strong></p>
-</div></div>
-<div class="note-box">
-<p><strong>Challenge:</strong> How to merge all these different copies together and maintain a final copy of the project?</p>
-</div>
-<div class="pill p-orange">
-<p>John makes his changes and sends his project to Laura</p>
-</div>
-<aside class="notes">
-<p>Here talk about the challenges when working a group project of code for example without using version control</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="situation-2-a-group-coding-project-3" class="slide level2">
-<h2>Situation #2: A group coding project</h2>
-<!-- Source slide 8 -->
-<div class="columns">
-<div class="column" style="width:33%;">
-<div class="pill p-orange">
-<p>Project copy #1</p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/git-intro-lesson/slide-05-01-bb5a1ef5ea.png" style="width:40.0%"></p>
-<figcaption>Alice</figcaption>
-</figure>
-</div>
-<p><strong>Alice</strong></p>
-</div><div class="column" style="width:33%;">
-<div class="pill p-grey">
-<p>Project copy #2</p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/git-intro-lesson/slide-05-02-c1c46fe862.jpg" style="width:40.0%"></p>
-<figcaption>Laura</figcaption>
-</figure>
-</div>
-<p><strong>Laura</strong></p>
-</div><div class="column" style="width:33%;">
-<div class="pill p-red">
-<p>Project copy #3</p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/git-intro-lesson/slide-05-03-8ec2483c8b.png" style="width:40.0%"></p>
-<figcaption>John</figcaption>
-</figure>
-</div>
-<p><strong>John</strong></p>
-</div></div>
-<div class="note-box">
-<p><strong>Challenge:</strong> How to merge all these different copies together and maintain a final copy of the project?</p>
-</div>
-<div class="pill p-orange">
-<p>John makes his changes and sends his project to Laura</p>
-</div>
-<div class="pill p-orange">
-<p>Laura merges her changes and sends it to Alice</p>
-</div>
-<aside class="notes">
-<p>Here talk about the challenges when working a group project of code for example without using version control</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="situation-2-a-group-coding-project-4" class="slide level2">
-<h2>Situation #2: A group coding project</h2>
-<!-- Source slide 9 -->
-<div class="columns">
-<div class="column" style="width:33%;">
-<div class="pill p-orange">
-<p>Project copy #1</p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/git-intro-lesson/slide-05-01-bb5a1ef5ea.png" style="width:40.0%"></p>
-<figcaption>Alice</figcaption>
-</figure>
-</div>
-<p><strong>Alice</strong></p>
-</div><div class="column" style="width:33%;">
-<div class="pill p-grey">
-<p>Project copy #2</p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/git-intro-lesson/slide-05-02-c1c46fe862.jpg" style="width:40.0%"></p>
-<figcaption>Laura</figcaption>
-</figure>
-</div>
-<p><strong>Laura</strong></p>
-</div><div class="column" style="width:33%;">
-<div class="pill p-red">
-<p>Project copy #3</p>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/git-intro-lesson/slide-05-03-8ec2483c8b.png" style="width:40.0%"></p>
-<figcaption>John</figcaption>
-</figure>
-</div>
-<p><strong>John</strong></p>
-</div></div>
-<div class="note-box">
-<p><strong>Challenge:</strong> How to merge all these different copies together and maintain a final copy of the project?</p>
-</div>
-<div class="pill p-orange">
-<p>John makes his changes and sends his project to Laura</p>
-</div>
-<div class="pill p-orange">
-<p>Laura merges her changes and sends it to Alice</p>
-</div>
-<div class="pill p-orange">
-<p>Alice merges her changes, reviews, and maintains the final copy</p>
-</div>
-<aside class="notes">
-<p>Here talk about the challenges when working a group project of code for example without using version control</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="situation-2-consequences-of-this-solution" class="slide level2">
-<h2>Situation #2: Consequences of this solution</h2>
-<!-- Source slide 10 -->
+<section id="a-group-coding-project-challenges" class="slide level2">
+<h2>A group coding project : <em>Challenges</em></h2>
 <ul>
-<li>Manual approach</li>
-<li>Time consuming</li>
-<li>Error prone</li>
-<li>Not scalable</li>
-<li>Inefficient</li>
+<li>How to merge all these different copies together and maintain a final copy of the project?</li>
+<li>What changed between two versions of the same analysis?</li>
+<li>Which merge did work and which one did not?</li>
+<li>Who changed what and when?</li>
 </ul>
-</section>
-<section id="situation-2-consequences-of-this-solution-1" class="slide level2">
-<h2>Situation #2: Consequences of this solution</h2>
-<!-- Source slide 11 -->
-<ul>
-<li>Manual approach</li>
-<li>Time consuming</li>
-<li>Error prone</li>
-<li>Not scalable</li>
-<li>Inefficient</li>
-</ul>
-<div class="box">
-<p>We need an efficient system that tracks different versions of a project, allowing the team to know who made changes, when, and why.</p>
+<div class="fragment">
+<p><img data-src="images/git-intro-lesson/slide-14-01-bf61659951.png" style="width:80.0%"></p>
 </div>
 </section>
 <section id="what-is-git" class="slide level2">
 <h2>What is Git?</h2>
-<!-- Source slide 12 -->
-<h3 id="mentimeter">Mentimeter</h3>
-<p><a href="https://www.menti.com/alx2mugaqr1n">https://www.menti.com/alx2mugaqr1n</a></p>
-</section>
-<section id="what-is-git-menti-poll" class="slide level2">
-<h2>What is Git? — Menti Poll</h2>
-<!-- Source slide 13 (hidden in original PowerPoint) -->
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/git-intro-lesson/slide-13-01-5f139a1ce3.png" style="width:75.0%"></p>
-<figcaption>Menti Poll screenshot</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<p>What do you already know about Git?</p>
-</div></div>
-<aside class="notes">
-<p>Originally hidden in PowerPoint.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="what-is-git-1" class="slide level2">
-<h2>What is Git?</h2>
-<!-- Source slide 14 (hidden in original PowerPoint) -->
-
-<img data-src="images/git-intro-lesson/slide-14-01-bf61659951.png" style="width:40.0%" class="r-stretch quarto-figure-center"><p class="caption">Git visual</p><ul>
-<li>Git is the most used version control system. More than 90% of software projects around the world use Git.</li>
-<li>It was created in 2005 by Linus Torvalds, the same creator of Linux.</li>
-<li>It is free, open source, fast, and scalable.</li>
+<ul>
+<li class="fragment">It was created in 2005 by Linux Torvalds , the same creator of Linux OS.</li>
+<li class="fragment">Git is <strong>free</strong>, <strong>open source</strong>, <strong>distributed</strong>, <strong>fast</strong> and designed to <strong>scale</strong> to very large projects. Those were explicit design goals from the beginning.</li>
+<li class="fragment">Git is version-control software: it records the history of a project and makes it possible to compare, share and combine changes.</li>
+<li class="fragment">Git is the most dominant version-control system used in software development today.</li>
+<li class="fragment">Git was originally built to manage Linux development, but today it is used for: software,research code, data analysis,websites,documentation,books and much more.</li>
+<li class="fragment">Was Git originally designed to make version control easy for beginners?
+<ul>
+<li class="fragment">No.&nbsp;It was designed to solve the collaboration problems of one of the world’s largest software projects (the development of Linux).</li>
+</ul></li>
 </ul>
-<p><small>These claims are carried over from the original slides and have not been independently fact-checked.</small></p>
-<aside class="notes">
-<p>Originally hidden in PowerPoint.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="how-to-use-git" class="slide level2">
 <h2>How to use Git?</h2>
@@ -590,66 +249,9 @@
 <li>GitHub account</li>
 </ul>
 </section>
-<section id="schedule" class="slide level2">
-<h2>Schedule</h2>
-<!-- Source slide 17 (hidden in original PowerPoint) -->
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Time</th>
-<th style="text-align: left;">Session</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">09:30–09:45</td>
-<td style="text-align: left;">Git intro</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">09:45–11:30</td>
-<td style="text-align: left;">Setting up a local Git repository</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">14:30–14:45</td>
-<td style="text-align: left;">Break</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">14:45–15:45</td>
-<td style="text-align: left;">Git cycle and ignoring things</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">15:30–15:45</td>
-<td style="text-align: left;">Exercise</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">15:45–16:00</td>
-<td style="text-align: left;">Break</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">16:00–17:00</td>
-<td style="text-align: left;">Exploring history and concluding remarks</td>
-</tr>
-</tbody>
-</table>
-<aside class="notes">
-<p>Originally hidden in PowerPoint. Schedule overlaps are retained from the source and should be reviewed before reuse.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
 <section id="by-the-end-of-this-lesson-we-expect-to" class="slide level2">
 <h2>By the end of this lesson, we expect to:</h2>
 <!-- Source slide 18 -->
-<div class="columns">
-<div class="column" style="width:64%;">
 <ul>
 <li>Create a local Git repository</li>
 <li>Manage the history of changes to a file</li>
@@ -657,25 +259,54 @@
 <li>Set up a remote project</li>
 <li>Collaborate with other peers</li>
 </ul>
-</div><div class="column" style="width:36%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/git-intro-lesson/slide-18-01-fc95f6d9a9.png" style="width:80.0%"></p>
-<figcaption>Cartoon researcher using a laptop</figcaption>
-</figure>
-</div>
+</section>
+<section id="lets-start" class="slide level2 spacious-slide">
+<h2>Let’s start</h2>
+</section>
+<section id="the-three-areas-of-git" class="slide level2">
+<h2>The three areas of Git</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<h3 id="working-directory">Working directory</h3>
+<p>Where you <strong>edit files</strong> and experiment freely.</p>
+</div><div class="column" style="width:10%;">
+<p><code>git add</code></p>
+<p>→</p>
+</div><div class="column" style="width:20%;">
+<h3 id="staging-area">Staging area</h3>
+<p>Where you <strong>select changes</strong> for the next snapshot.</p>
+</div><div class="column git-transition" style="width:10%;">
+<p><code>git commit</code></p>
+<p>→</p>
+</div><div class="column" style="width:20%;">
+<h3 id="git-history">Git history</h3>
+<p>Where Git <strong>records snapshots</strong> you can revisit and compare.</p>
 </div></div>
 </section>
-<section id="lets-start-the-lesson" class="slide level2">
-<h2>Let’s start the lesson</h2>
-<!-- Source slide 19 -->
-
-<img data-src="images/git-intro-lesson/slide-19-01-63a0fbeafb.jpg" style="width:65.0%" class="r-stretch quarto-figure-center"><p class="caption">Let’s start the lesson graphic</p></section>
-<section id="the-working-directory-staging-area-and-git-history" class="slide level2">
-<h2>The working directory, staging area and Git history</h2>
-<!-- Source slide 20 -->
-
-<img data-src="images/git-intro-lesson/slide-20-01-ab8b000916.png" style="width:93.0%" class="r-stretch quarto-figure-center"><p class="caption">Diagram of working directory staging area and Git history</p></section>
+<section id="git-is-like-taking-a-photograph" class="slide level2">
+<h2>Git is like taking a photograph!</h2>
+<p>A <strong>commit</strong> is like taking a snapshot of your project.</p>
+<div class="columns">
+<div class="column" style="width:25%;">
+<h3 id="prepare-the-scene">🧩 Prepare the scene</h3>
+<p><strong>Working directory</strong></p>
+<p>Arrange, change, and experiment with the objects.</p>
+</div><div class="column" style="width:10%;">
+<p><code>git add</code></p>
+<p>→</p>
+</div><div class="column" style="width:25%;">
+<h3 id="frame-the-picture">🖼️ Frame the picture</h3>
+<p><strong>Staging area</strong></p>
+<p>Choose which elements/objects will appear in the picture.</p>
+</div><div class="column" style="width:10%;">
+<p><code>git commit</code></p>
+<p>→</p>
+</div><div class="column" style="width:25%;">
+<h3 id="take-the-picture">📸 Take the picture!</h3>
+<p><strong>Git history</strong></p>
+<p>Save the snapshot in your photo album.</p>
+</div></div>
+</section>
 <section id="tracked-staged-and-untracked-files" class="slide level2">
 <h2>Tracked, staged and untracked files</h2>
 <!-- Source slide 21 -->
@@ -736,7 +367,7 @@
           display:block!important;
       }</style></aside>
 
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -772,7 +403,7 @@
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"\u003ci class=\"fas fa-gear\">\u003c/i>","content":"\u003cul class=\"slide-menu-items\">\n\u003cli class=\"slide-tool-item active\" data-item=\"0\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\">\u003ckbd>f\u003c/kbd> Fullscreen\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"1\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\">\u003ckbd>s\u003c/kbd> Speaker View\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"2\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\">\u003ckbd>o\u003c/kbd> Slide Overview\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"3\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\">\u003ckbd>e\u003c/kbd> PDF Export Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"4\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\">\u003ckbd>r\u003c/kbd> Scroll View Mode\u003c/a>\u003c/li>\n\u003cli class=\"slide-tool-item\" data-item=\"5\">\u003ca href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\">\u003ckbd>?\u003c/kbd> Keyboard Help\u003c/a>\u003c/li>\n\u003c/ul>"}],"openButton":true,"openButtonLabel":"Slide menu"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -1027,7 +658,8 @@
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }
           // Inspect non-navigation links and adorn them if external
-         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          window.quartoDecorateExternalLinks = function (root) {
+         var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
           for (var i=0; i<links.length; i++) {
             const link = links[i];
             if (!isInternal(link.href)) {
@@ -1036,8 +668,69 @@
               if (link.dataset.originalHref !== undefined) {
                 link.href = link.dataset.originalHref;
               }
+              if (!link.classList.contains('no-external-icon')) {
+              }
             }
           }
+          };
+          window.quartoDecorateExternalLinks(window.document);
+        // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+        // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+        const hideOnEscAndFocusOut = {
+          name: 'hideOnEscAndFocusOut',
+          defaultValue: true,
+          fn(instance) {
+            const dismiss = () => {
+              // A show scheduled by the trigger delay would otherwise reopen it
+              instance.clearDelayTimeouts();
+              instance.hide();
+            };
+            const onKeyDown = (event) => {
+              if (event.key !== 'Escape') {
+                return;
+              }
+              // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+              // except an open reveal.js slide menu, which Esc should close too.
+              // The menu handles keys only when its keyboard option is on.
+              const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+                window.Reveal.getConfig().menu?.keyboard !== false;
+              if (!menuHandlesEsc) {
+                event.stopPropagation();
+              }
+              if (instance.popper.contains(window.document.activeElement)) {
+                // Disabled while refocusing so the focus trigger does not reopen it
+                instance.disable();
+                instance.reference.focus();
+                instance.enable();
+              }
+              dismiss();
+            };
+            const onFocusOut = (event) => {
+              const target = event.relatedTarget;
+              if (target && !instance.reference.contains(target) &&
+                  !instance.popper.contains(target)) {
+                dismiss();
+              }
+            };
+            // On the trigger too: a click trigger (code-annotations: select) has no
+            // blur handling. Attached for the instance's lifetime so leaving the
+            // trigger also cancels a show still pending on the trigger delay.
+            instance.reference.addEventListener('focusout', onFocusOut);
+            return {
+              onShow() {
+                window.document.addEventListener('keydown', onKeyDown, true);
+                instance.popper.addEventListener('focusout', onFocusOut);
+              },
+              onHide() {
+                window.document.removeEventListener('keydown', onKeyDown, true);
+                instance.popper.removeEventListener('focusout', onFocusOut);
+              },
+              onDestroy() {
+                instance.reference.removeEventListener('focusout', onFocusOut);
+              },
+            };
+          },
+        };
         function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
           const config = {
             allowHTML: true,
@@ -1051,6 +744,7 @@
             interactiveBorder: 10,
             theme: 'light-border',
             placement: 'bottom-start',
+            plugins: [hideOnEscAndFocusOut],
           };
           if (contentFn) {
             config.content = contentFn;
