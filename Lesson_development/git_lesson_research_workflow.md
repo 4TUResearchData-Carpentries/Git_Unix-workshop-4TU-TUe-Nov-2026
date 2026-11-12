@@ -845,6 +845,8 @@ On GitHub, open the PR's **Files changed** tab. Look for missing instructions, c
 cd ~/Desktop
 git clone --branch improve-readme https://github.com/<collaborator-username>/field-study.git  field-study-review
 cd field-study-review
+git branch -a
+git switch improve-readme
 git log -1 --name-only
 cat Readme.md
 ```
