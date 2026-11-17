@@ -31,7 +31,7 @@ Collaborating with others involves managing these remote repositories and **push
 
 ::: {.columns}
 ::: {.column width="43%"}
-![GitHub logo](images/git-remotes-intro-lesson/slide-03-01-4d7a481a15.png){width="86%"}
+![](images/git-remotes-intro-lesson/slide-03-01-4d7a481a15.png){width="86%"}
 :::
 
 ::: {.column width="57%"}
@@ -54,35 +54,34 @@ Collaborating with others involves managing these remote repositories and **push
 ::: {.column width="33%"}
 ![Local computer 1](images/git-remotes-intro-lesson/slide-04-01-76a9fadabe.jpg){width="65%"}
 
-::: {.pill .p-cream}
-Fetch / Pull ←
-::: {.pill .p-orange}
-Push →
-:::
+
+Fetch / Pull ←  From Repository
+
+Push → To Repository
 :::
 
 ::: {.column width="33%"}
 ![Local computer 2](images/git-remotes-intro-lesson/slide-04-01-76a9fadabe.jpg){width="65%"}
 
-::: {.pill .p-cream}
-Fetch / Pull ←
-::: {.pill .p-orange}
-Push →
+
+Fetch / Pull ←  From Repository
+
+Push → To Repository
 :::
-:::
+
 
 ::: {.column width="33%"}
 ![Local computer 3](images/git-remotes-intro-lesson/slide-04-01-76a9fadabe.jpg){width="65%"}
 
-::: {.pill .p-cream}
-Fetch / Pull ←
-::: {.pill .p-orange}
-Push →
-:::
+Fetch / Pull ←  From Repository
+
+Push → To Repository
+
 :::
 :::
 
-<small>Push sends local commits to the remote; fetch/pull retrieves changes from a remote.</small>
+- **Push sends local commits** to the remote; 
+- **Fetch/Pull retrieves remote commits** from a remote.
 
 
 ## Schedule
@@ -102,7 +101,7 @@ Get to know 4TU.ResearchData, described in the original presentation as a truste
 
 <!-- Source slide 6 -->
 
-![Let’s start the lesson illustration](images/git-remotes-intro-lesson/slide-06-01-63a0fbeafb.jpg){width="62%"}
+![](images/git-remotes-intro-lesson/slide-06-01-63a0fbeafb.jpg){width="62%"}
 
 
 ## SSH connection
@@ -124,44 +123,7 @@ SSH keys can be used to authenticate a user when interacting with a Git remote.
 :::
 
 
-## Dealing with conflicts when collaborating in a project
 
-<!-- Source slide 8 (hidden in original PowerPoint) -->
-
-::: {.columns}
-::: {.column width="50%"}
-![Alice](images/git-remotes-intro-lesson/slide-08-01-bb5a1ef5ea.png){width="30%"}
-
-**Alice**
-
-```bash
-git add .
-git commit -m "message"
-git pull
-git push
-```
-:::
-
-::: {.column width="50%"}
-![John](images/git-remotes-intro-lesson/slide-08-02-8ec2483c8b.png){width="30%"}
-
-**John**
-
-```bash
-git add .
-git commit -m "message"
-git push
-```
-:::
-:::
-
-::: {.note-box}
-Both collaborators coordinate changes through a shared remote repository.
-:::
-
-::: {.notes}
-Originally hidden in PowerPoint.
-:::
 
 
 ## Branches over time
