@@ -2,7 +2,7 @@
 
 ## Workshop narrative
 
-**Scenario:** A fictional research team is studying water temperatures at a field site. One temperature is suspiciously high. As the team checks its field notes, it updates its Python script and methodology, records the reasoning for a correction, and ensures that large or restricted raw datasets are not committed accidentally.
+**Scenario:** A  research team is studying water temperatures at a field site. One temperature is suspiciously high. As the team checks its field notes, it updates its Python script and methodology, records the reasoning for a correction, and ensures that large or restricted raw datasets are not committed accidentally.
 
 The recurring teaching questions are:
 
@@ -95,7 +95,7 @@ export PS1='$ '
 **Opening question:** You ran an analysis two months ago and got a different result. How would you determine which code and assumptions produced each result?
 
 
-> Instructor Note: Present Git as a way to document the evolution of research, not merely as a backup or a software-development requirement. Keep the fictional field-study story visible throughout the demonstrations.
+> Instructor Note: Present Git as a way to document the evolution of research, not merely as a backup or a software-development requirement. Keep the  field-study story visible throughout the demonstrations.
 
 
 ### 🔧 Step 1: Setting Up Git [6 min]
@@ -145,6 +145,8 @@ git config --global core.autocrlf input
 
 ### 📦 Step 2: Creating a Repository [4 min]
 
+**Scenario:** A  research team is studying water temperatures at a field site. 
+
 **Story:** Our research team needs one location for its analysis script, methods, and project history.
 
 ```bash
@@ -168,7 +170,7 @@ git status
 
 ### 📝 Step 3: Tracking Your First Change [10 min]
 
-**Story:** Our team has collected four fictional water-temperature readings. It wants to calculate their arithmetic mean and remember the exact code used.
+**Story:** Our team has collected four water-temperature readings. It wants to calculate their arithmetic mean and remember the exact code used.
 
 Create and edit the analysis script:
 
@@ -470,7 +472,7 @@ Stage the related changes together:
 git add calculate_mean.py
 git add methods.md
 git diff --staged
-git commit -m "Correct temperature transcription error after field-note check"
+git commit -m "Correct temperature error after field-note check"
 ```
 
 > Instructor Note: The changing numeric result makes the value of an audit trail tangible. Emphasize that the reason for the change belongs in the commit message and the research documentation, not only in someone's memory.

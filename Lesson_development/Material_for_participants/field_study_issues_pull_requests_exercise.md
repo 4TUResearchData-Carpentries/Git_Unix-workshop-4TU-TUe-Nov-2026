@@ -5,11 +5,11 @@
 
 
 
-### 🔬 Pair challenge: Choose a real improvement to your `field-study` repository
+### 🔬 Pair challenge: Maka real improvement to your `field-study` repository
 
 Follow the collaborative workflow : **1. Owner: describe a problem using a GitHub issue** -> **2. Collaborator: fork, clone, and create a branch** -> **3. Collaborator: open a pull request** -> **4. Owner: review before merging** -> **5. Owner: merge, then synchronize the original local repository**
 
-Switch roles so both learners experience proposing and reviewing changes. Create an issue in the owner's repository, then complete the same contribution workflow. Choose **one** of these issues (or write your own, keeping the scope small).
+Switch roles so both learners experience proposing and reviewing changes. Create an issue in the owner's repository, then complete the same contribution workflow. 
 
 Title of the issue: **Make the project reusable: create `README.md`**
 

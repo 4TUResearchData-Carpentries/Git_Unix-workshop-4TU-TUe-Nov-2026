@@ -59,7 +59,7 @@ title: Welcome to the Unix & Git workshop
 :::
 
 ::: {.column width="30%"}
-![Neha Moopen](images/workshop-intro-day-1/Martijn-Klabbers.webp){width="55%"}
+![Martijn Klabbers](images/workshop-intro-day-1/Martijn-Klabbers.webp){width="55%"}
 
 
 <small> Manager at ICT, Education Innovator at Department of Mathematics and Computer Science, TU/e</small>
@@ -68,18 +68,24 @@ title: Welcome to the Unix & Git workshop
 :::
 
 
-## The team of the workshop
-
-<!-- Source slide 5 -->
-
-### You!
-
-**Faculty**
-
-![Pie chart of workshop participant faculties](images/workshop-intro-day-1/slide-05-faculty-chart.svg){width=75%}
+## The team of the workshop : You! 
 
 
 
+
+- Civil Engineering 
+- Mechanical Engineering
+- Chemical Engineering
+- Nuclear Engineering
+- Built Environment
+
+## How often have you used the command line before?
+
+![](images/workshop-intro-day-1/unix_level_audience.png){width="60%"}
+
+## How often have you used Git before?
+
+![](images/workshop-intro-day-1/git_level_audience.png){width="60%"}
 
 ## Code of Conduct
 
