@@ -179,7 +179,7 @@ Live coding experience.
 
 
 
-## You
+<!-- ## You
 
 <!-- Source slide 8 -->
 
@@ -212,7 +212,7 @@ How often do you currently use the command line?
 ::: {.column width="32%"}
 ![Workshop audience](images/unix-shell-introduction/slide-09-01-53bc33319a.png){width="85%"}
 :::
-:::
+::: -->
 
 
 ## Meet Nelle Nemo, Our case study
