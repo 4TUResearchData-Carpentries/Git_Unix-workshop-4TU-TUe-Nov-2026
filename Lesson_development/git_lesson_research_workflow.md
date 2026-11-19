@@ -112,7 +112,7 @@ Explore help:
 
 ```bash
 git --help
-git init -h
+git init -h # each command has its own help 
 ```
 
 Configure Git identity (usually needed only once per computer):
@@ -579,6 +579,19 @@ Go back to your `mini-field-study` folder and continue with exercises (Lesson_de
 
 ✅ **End of Day 1.** Keep the `field-study` repository: it becomes the local repository connected to GitHub on Day 2.
 
+## Recap
+- we have learned how to create a local git repository from scratch 
+- we have learned the cycle of modified, add and commit a file 
+- we have learned that we can tell git what to ignore using the .gitignore file 
+    - also pptx, word documents , pdfs, excel spreadsheets are not recognizable line by line by Git
+    - only files that when opened in a text editor are human readable are suitable for git to track, plain text files
+- we have learned how to explore the history of commits
+- we have learned how to move in the history without changing it 
+
+Tomorrow,
+
+- we will turn this solo project into a collaborative project with Github. 
+
 ## Add your feedback in the collaborative document 
 
 - +1 one thing you like/keep it 
@@ -598,7 +611,7 @@ Go back to your `mini-field-study` folder and continue with exercises (Lesson_de
 #### a. Create a GitHub Repository
 > Ask participants to log into GitHub and create an **empty public repository** named `field-study`.
 
-* Description suggestion: **Analysis of different clinical treatments**
+* Description suggestion: **Analysis of different water temperature measurements**
 
 #### b. Connect Local Repo to Remote
 ##### b0. SSH Setup for GitHub Access (**Technical Break**, 30 min)
