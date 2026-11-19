@@ -9,7 +9,7 @@
 <link href="git-remotes-intro-lesson_files/libs/quarto-html/quarto-syntax-highlighting-7b1528b1cba7e9f63f59baa7408a6f56.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.11.9">
 
-  <title>Git Remotes</title>
+  <title>Git Remotes and collaboration</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -133,44 +133,36 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Git Remotes</h1>
+  <h1 class="title">Git Remotes and collaboration</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section class="slide level2">
+<section>
+<section id="what-are-git-remotes" class="title-slide slide level1 center">
+<h1>What are Git remotes?</h1>
 
-<!-- Converted from Git-remotes-intro-lesson.pptx; 1 slide per original PPTX slide.
-     Images are stored under ./images/git-remotes-intro-lesson/. -->
-</section>
-<section id="git-remotes-github" class="slide level2">
-<h2>Git Remotes: GitHub</h2>
-<!-- Source slide 1 -->
-<div class="pill p-orange">
-<p>Git remotes and collaboration</p>
-</div>
 </section>
 <section id="git-remotes" class="slide level2">
 <h2>Git remotes</h2>
-<!-- Source slide 2 -->
-<p>Remote repositories are versions of your project that are hosted on the Internet or somewhere on a network.</p>
-<p>Collaborating with others involves managing these remote repositories and <strong>pushing</strong> and <strong>pulling</strong> data to and from them when you need to share work.</p>
-<p><strong>Examples:</strong> GitHub, GitLab, Bitbucket.</p>
+<ul>
+<li class="fragment"><p>Git was created to support collaboration among developers working on the Linux kernel.</p></li>
+<li class="fragment"><p>Git is distributed: every developer has a local repository containing the full project history.</p></li>
+<li class="fragment"><p>Git remotes allow these independent repositories to exchange changes, making collaboration possible without relying on a single central server.</p></li>
+<li class="fragment"><p>Remote repositories (Git remotes) are versions of your project that are hosted on the Internet or somewhere on a network (private server, like a institutional server).</p></li>
+<li class="fragment"><p>Collaborating with others involves managing these remote repositories and <strong>pushing</strong> and <strong>pulling</strong> data to and from them when you need to share work.</p></li>
+<li class="fragment"><p><strong>Examples:</strong> GitHub, GitLab, Bitbucket.</p></li>
+</ul>
 </section>
 <section id="github" class="slide level2">
 <h2>GitHub</h2>
-<!-- Source slide 3 -->
-<div class="columns">
-<div class="column" style="width:43%;">
-<p><img data-src="images/git-remotes-intro-lesson/slide-03-01-4d7a481a15.png" style="width:86.0%"></p>
-</div><div class="column" style="width:57%;">
 <ul>
-<li>AI-powered developer platform for creating, storing, managing and sharing code</li>
-<li>Combines Git-based distributed version control with access control, issue tracking, feature requests, project management, continuous integration and wikis</li>
-<li>One of the largest source code hosts</li>
+<li><p>GitHub is a web-based platform for hosting Git repositories, sharing code, and collaborating on projects.</p></li>
+<li><p>Launched in 2008, three years after Git was created, it was acquired by Microsoft in 2018.</p></li>
+<li><p>It extends Git with collaboration features such as Issues, Pull Requests, code reviews, and discussions.</p></li>
+<li><p>It also offers GitHub Actions to automate workflows such as testing and deploying software.</p></li>
 </ul>
-</div></div>
 </section>
 <section id="local-and-remote-repositories" class="slide level2">
 <h2>Local and remote repositories</h2>
@@ -186,8 +178,8 @@
 <figcaption>Local computer 1</figcaption>
 </figure>
 </div>
-<p>Fetch / Pull ← From Repository</p>
-<p>Push → To Repository</p>
+<p>Fetch / Pull ← From Remote</p>
+<p>Push → To Remote</p>
 </div><div class="column" style="width:33%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -195,8 +187,8 @@
 <figcaption>Local computer 2</figcaption>
 </figure>
 </div>
-<p>Fetch / Pull ← From Repository</p>
-<p>Push → To Repository</p>
+<p>Fetch / Pull ← From Remote</p>
+<p>Push → To Remote</p>
 </div><div class="column" style="width:33%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -204,21 +196,54 @@
 <figcaption>Local computer 3</figcaption>
 </figure>
 </div>
-<p>Fetch / Pull ← From Repository</p>
-<p>Push → To Repository</p>
+<p>Fetch / Pull ← From Remote</p>
+<p>Push → To Remote</p>
 </div></div>
 <ul>
 <li><strong>Push sends local commits</strong> to the remote;</li>
 <li><strong>Fetch/Pull retrieves remote commits</strong> from a remote.</li>
 </ul>
 </section>
-<section id="schedule" class="slide level2">
-<h2>Schedule</h2>
-<!-- Source slide 5 -->
-<p><strong>13:30–15:30</strong></p>
-<p>Types of collaborations and good practices for collaboration</p>
-<p><strong>15:30–16:30</strong></p>
-<p>Get to know 4TU.ResearchData, described in the original presentation as a trusted repository for research data and software in natural and engineering sciences and design.</p>
+<section id="what-we-will-do-today" class="slide level2">
+<h2>What we will do today?</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Time</th>
+<th style="text-align: left;">Activity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">09:30–12:30</td>
+<td style="text-align: left;">Create a remote repository and clone/push/pull from an existing repository</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">12:30–13:30</td>
+<td style="text-align: left;"><strong>Lunch</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">13:30–14:30</td>
+<td style="text-align: left;">Pair assignment of collaboration</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">14:30–14:45</td>
+<td style="text-align: left;"><strong>Break</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">14:45- 15:30</td>
+<td style="text-align: left;">Introduction to 4TU.ResearchData</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">15:30-16:00</td>
+<td style="text-align: left;">Feedback (post workshop survey)</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="lets-start-the-lesson" class="slide level2">
 <h2>Let’s start the lesson</h2>
@@ -253,7 +278,7 @@
 <!-- Source slide 10 -->
 
 
-<img data-src="images/git-remotes-intro-lesson/slide-10-01-0d549e3781.png" style="width:89.0%" class="r-stretch quarto-figure-center"><p class="caption">Git branching timeline with pull requests and merges</p></section>
+<img data-src="images/git-remotes-intro-lesson/slide-10-01-0d549e3781.png" style="width:89.0%" class="r-stretch quarto-figure-center"><p class="caption">Git branching timeline with pull requests and merges</p></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
