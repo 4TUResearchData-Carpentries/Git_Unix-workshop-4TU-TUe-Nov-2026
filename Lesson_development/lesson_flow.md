@@ -25,9 +25,8 @@ Day One:
 
 Day 2:
 
-- start with an intro of Day 2 : Agenda and how their feedback can be implemented 
+- Start with the icebreaker , and what they learn yesterday and their feedback 
 
-- Same icebreaker as day 1
 
 - Presentation about git remotes 
 - ssh part (John and Leila)
